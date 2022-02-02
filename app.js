@@ -22,7 +22,7 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/register', (req, res) => {
+app.get('/registro', (req, res) => {
     res.sendFile(__dirname + '/views/register.html');
 });
 
