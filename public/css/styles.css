@@ -202,6 +202,14 @@ main {
 .container-fluid {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: rgb(235, 235, 235);
+}
+
+#container-registro {
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: rgb(235, 235, 235);
@@ -300,12 +308,17 @@ li a i {
     transition: all 0.5s ease-in-out;
 }
 
-
-
 body {
     background-color: rgb(219, 209, 209);
     font-family: roboto;
     min-height: 100vh;
+}
+
+main-prod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
 }
 
 .main {
