@@ -1,35 +1,35 @@
-const express= require("express")
-const app=express()
-const path= require("path")
+const express = require("express")
+const app = express()
+const path = require("path")
 
-app.get('/', (req,res)=>{
+app.get('/', (req, res) => {
     res.send("home")
 })
 
-app.get('/login', (req,res)=>{
+app.get('/login', (req, res) => {
     res.sendFile((__dirname + '/views/login.html'))
 
 })
 
 app.use(express.static(path.join(__dirname, './public')))
 
-app.listen(process.env.PORT||3005,function(){
+app.listen(process.env.PORT || 3005, function() {
     console.log("servidor corriendo")
 
 })
 
-app.get('/home', (req,res)=>{
+app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/register', (req,res)=>{
+app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/views/register.html');
 });
 
-app.get('/tu_carrito', (req,res)=>{
+app.get('/tu_carrito', (req, res) => {
     res.sendFile(__dirname + '/views/carro_de_compras.html');
 });
 
-app.get('/detalle_producto', (req,res)=>{
+app.get('/detalle_producto', (req, res) => {
     res.sendFile(__dirname + '/views/detalle_producto.html');
 });
