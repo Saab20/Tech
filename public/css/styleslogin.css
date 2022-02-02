@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(180, 180, 178);
+    margin: 0px;
+    padding: 0px;
+}
+
+.formulario {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+    border: 15px solid #ffffff;
+}
+
+.menu {
+    display: flex;
+    color: black;
+}
+
+nav {
+    display: flex;
+    font-size: 15px;
+}
+
+ul li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.informacion {
+    background-color: white;
+    margin: 1px 0px;
+}
+
+.articulos img {
+    width: 50%;
+}
+
+ .articulos i{
+    display:none;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;
+    right: 95px;
+    top: 65px;
+}
+
+.productos .articulos:hover i {
+    transform: rotate(-90deg)
+}
+
+.articulos .informacion {
+    display: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #181717;
+    position: relative;
+    padding: 10px;
+}
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.productos .articulos {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.boton {
+    width: 100%;
+    font-size: 16px;
+    font-weight: normal;
+    display: none;
+    text-align: left;
+    right: 80px;
+    top: 60px;
+}
+
+.descripcion {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.precio {
+    top: 35px;
+    display: block;
+    color: #000000;
+}
+
+@media (max-width: 430px) {
+    .productos .articulos {
+        width: 100%;
+    }
+}
+
+main {
+    text-align: center;
+}
+
+@media (max-width: 430px) {
+    .boton {
+        width: 100%;
+    }
+}
+
+@media (min-width: 361px){
+    .productos  :hover .boton{
+        display: block;
+    }
+
+}
+@media (min-width: 361px){
+    .productos  :hover i{
+        display: block;
+    }
+
+} 
+
+@media only screen and (min-width: 400px) {}
+
+@media only screen and (max-width: 400px) and (min-width: 400px) and (orientation: landscape) {}
+
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(235, 235, 235);
+}
+
+.card {
+    padding: 10px 15px;
+    margin: 15px 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+ 

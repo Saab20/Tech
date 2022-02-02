@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/styleslogin.css"> </link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>tech</title>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="container-fluid row bg-light p-0 m-0 mb-1">
+
+            <nav class="d-flex align-items-end  p-0 navbar navbar-expand-lg navbar-light bg-light">
+                <div class="p-0 m-0 ">
+                    <img width="50px" height="50px" src="img/logo.jpg" alt="">
+                </div>
+                <div class="container-fluid collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Acerca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Televisores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Computadoras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Celulares</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-0 justify-content-end">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/login">Mi Cuenta <i class="far fa-id-card"></i></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/register">Registro <i class="far fa-id-card"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tu_carrito">Carrito<i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success m-1" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <a href="#ofertas"><img width="100px" height="250px" src="/img/porta.jpg" class="d-block w-100" alt="..."> </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#ofertas"> <img width="100px" height="250px" src="/img/ofertas2.JPG" class="d-block w-100" alt="..."></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#ofertas"> <img width="100px" height="250px" src="/img/ofertas3.JPG" class="d-block w-100" alt="..."></a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+            </div>
+
+        </div>
+
+
+
+        <!--<div class='productos'>
+
+        <div class="articulos">
+
+            <img src="/img/tv.jpg" class="card-img-top" alt="...">
+            <div class='informacion'>
+                <i class="fas fa-shopping-cart"></i>
+                <p class="precio">$6.770</p>
+                <h4 class="descripcion">TV UHD</h4>
+                <div class="boton">
+                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="articulos">
+            <img src="/img/pc gamer.jpg" class="card-img-top" alt="...">
+            <div class='informacion'>
+                <i class="fas fa-shopping-cart"></i>
+                <p class="precio">$230.000</p>
+                <h4 class="descripcion">Pc Gamer</h4>
+                <div class="boton">
+                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulos">
+            <img src="/img/celular.jpg" class="card-img-top" alt="...">
+            <div class='informacion'>
+                <i class="fas fa-shopping-cart"></i>
+                <p class="precio">$70.500</p>
+                <h4 class="descripcion">Iphone 12 Pro Max</h4>
+                <div class="boton">
+                    <button type="submit" class="btn btn-primary">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+
+        </div>-->
+
+        <main class="main">
+            <div class="container-fluid">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 50 pulgadas">
+                    <div class="card-body">
+                        <h4>TV samsung 50 pulgadas</h4>
+                        <p class="card-text">20% descuento</p>
+                        <div class="box-price">
+                            <span class="price1"><strike>$9.338</strike></span>
+                            <span class="price2"><b>$6.670</b></span>
+                            <span class="compra">$6.670</i></span></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+    </main>
+
+
+
+
+</body>
+
+</html>
