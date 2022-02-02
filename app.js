@@ -13,7 +13,7 @@ app.get('/login', (req,res)=>{
 
 app.use(express.static(path.join(__dirname, './public')))
 
-app.listen(3005,()=>{
+app.listen(process.env.PORT||3005,function(){
     console.log("servidor corriendo")
 
 })
