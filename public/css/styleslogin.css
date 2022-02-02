@@ -252,25 +252,28 @@ li a i {
 }
 
 .wrapper {
-    display: flex;
+    margin-top: 10px;
+    /**display: flex;
     text-align: center;
     position: absolute;
     top: 50%;
     left: 25%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);**/
 }
 
 .button-compra {
     padding: 0.3em 1em;
     text-align: center;
     text-decoration: none;
-    border: 2px solid silver;
-    font-size: 18px;
+    border: 2px solid green;
+    font-size: 16px;
     display: inline-block;
     border-radius: 0.3em;
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
+    background: green;
+    color: white;
 }
 
 .button-compra before {
@@ -286,9 +289,10 @@ li a i {
     transition: none;
 }
 
-.button-compra hover {
-    background-color: silver;
-    border-bottom: 4px solid darken(silver, 10%);
+.button-compra:hover {
+    background-color: #45e543;
+    border: #45e543;
+    border: 2px solid;
 }
 
 .button-compra before {
