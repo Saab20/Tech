@@ -34,7 +34,6 @@ header {
 }
 
 .login ul {
-   
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
@@ -335,11 +334,13 @@ body {
     width: 20rem;
     margin: auto;
     border: solid 10px rgb(179, 179, 245);
-    padding: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     max-width: 300px;
     box-shadow: 0 5px 10px -5px rgb(100 100 100 / 30%);
+    height: auto;
+    margin-top: 3rem;
 }
 
 .container2 {
@@ -377,7 +378,7 @@ body {
     width: 100%;
     background: none;
     color: black;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
     padding: .4rem .3rem;
     border: none;
     outline: none;
