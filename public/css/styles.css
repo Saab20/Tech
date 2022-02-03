@@ -34,14 +34,14 @@ header {
 }
 
 .login ul {
-    display: flex;
+   
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
 }
 
 .nav ul li {
-    padding: 0 20px;
+    padding: 20px;
 }
 
 .login ul li {
