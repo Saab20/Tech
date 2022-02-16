@@ -7,9 +7,9 @@ const app = express()
 const path = require("path")
 const ejs = require('ejs')
 
-app.set("view engine", "ejs")
 
 app.use(express.static(path.resolve(__dirname,"./public")))
+app.set("view engine", "ejs")
 
 
 app.use("/" ,usersRoutes)
