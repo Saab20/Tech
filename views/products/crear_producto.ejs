@@ -14,14 +14,14 @@
     </header>
     <!--MENU-->
 
-
-
-
+<div>
     <div class="container products-wrapper mt-5 form">
         <div class="row">
             <div class="col-12">
-                <h2 class="products-title">Creacion de Producto</h2>
+                <h2 class="products-title">Crear Producto</h2>
             </div>
+            <Br>
+                <Br>
         </div>
         <div class="col-12">
             <form action="/products/store" method="POST">
@@ -52,20 +52,24 @@
                         <textarea name="description" id="description" class="form-input"></textarea>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="button-compra">Guardar producto</button>
+                        <button type="submit" class="btn btn-primary">Guardar producto</button>
                     </div>
                 </div>
             </form>
         </div>
 
-        <!--FOOTER-->
+</div>
 
 
-        <%- include("../partials/footer") %>
 
+<footer>
+ <!--FOOTER-->
+ <%- include("../partials/footer") %>
+<!--FOOTER-->
 
-            <!--FOOTER-->
+</footer>
 
+        
 </body>
 
 </html>
