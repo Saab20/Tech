@@ -7,17 +7,18 @@
 header {
     background-color: rgb(180, 180, 178);
     position: fixed;
-    top: 0;
+    top: 0%;
     z-index: 100;
     width: 100%;
     height: 50px;
 }
 
 .top-header {
-    display: inline-flex;
-    justify-content: center;
-    align-items: flex-end;
+    display:inline-block;
+    justify-content:space-between, ;
+    align-items:flex-start;
     height: 50px;
+    font-size: 89%;
 }
 
 .buscador {
