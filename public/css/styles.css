@@ -34,7 +34,6 @@ header {
 }
 
 .login ul {
-    
     flex-direction: row;
     justify-content: flex-end;
     list-style: none;
@@ -419,4 +418,8 @@ body {
     font-family: roboto;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.container.products-wrapper.mt-5.form {
+    margin-top: 5rem !important;
 }
