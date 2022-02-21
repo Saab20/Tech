@@ -27,8 +27,13 @@ app.listen(process.env.PORT || 3005, function() {
 
 })
 
+// instalacion de express.json Metodo POST
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-
+// instalación del metodo Override Método PUT Y DELETE
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
 
 
 /*app.get('/home', (req, res) => {
