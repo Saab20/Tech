@@ -1,5 +1,6 @@
 const usersRoutes= require("./src/Routes/usersRoutes")
 const productsRoutes= require("./src/Routes/productsRoutes")
+const methodOverride = require('method-override');
 
 
 const express = require("express")
@@ -11,6 +12,13 @@ const ejs = require('ejs')
 app.use(express.static(path.resolve(__dirname,"./public")))
 app.set("view engine", "ejs")
 
+// instalacion de express.json Metodo POST
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+// instalación del metodo Override Método PUT Y DELETE
+
+app.use(methodOverride('_method'));
 
 app.use("/" ,usersRoutes)
 app.use("/", productsRoutes)
@@ -27,13 +35,7 @@ app.listen(process.env.PORT || 3005, function() {
 
 })
 
-// instalacion de express.json Metodo POST
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
-// instalación del metodo Override Método PUT Y DELETE
-const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
 
 
 /*app.get('/home', (req, res) => {
