@@ -3,6 +3,7 @@
         "id" : 1,
         "name" : "CYBERPOWERPC Gamer Xtreme VR Gaming PC",
         "price" : 2450,
+        "price2" : 3000,
         "discount": 30,
         "category": "ofertas",
         "description" : "Sistema: Intel Core i5-11600KF 3.9GHz 6-Core | Intel B560 Chipset | 16GB DDR4 | 500GB PCI-E NVMe SSD | 1TB HDD | Windows 11 Home 64-bit",

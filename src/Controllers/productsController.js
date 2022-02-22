@@ -1,8 +1,11 @@
-const path = require("path")
+const fs = require('fs');
+const path = require("path");
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controlador=
 {
-
     editar_producto:(req, res)=>{
         res.render("products/editar_producto.ejs")
     },
@@ -16,13 +19,13 @@ const controlador=
     },
 
     home:(req, res)=>{
-        res.render("products/home.ejs")
+        res.render("products/home.ejs", {productos: products})
     },
+
     detalle_producto:(req, res)=>{
         res.render("products/detalle_producto.ejs")
     },
-
-   
+  
 }
 
 module.exports=controlador

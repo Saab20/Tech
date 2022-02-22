@@ -1,13 +1,11 @@
 const usersRoutes= require("./src/Routes/usersRoutes")
 const productsRoutes= require("./src/Routes/productsRoutes")
-const methodOverride = require('method-override');
-
 
 const express = require("express")
 const app = express()
 const path = require("path")
 const ejs = require('ejs')
-
+const methodOverride = require('method-override');
 
 app.use(express.static(path.resolve(__dirname,"./public")))
 app.set("view engine", "ejs")
@@ -17,7 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // instalación del metodo Override Método PUT Y DELETE
-
 app.use(methodOverride('_method'));
 
 app.use("/" ,usersRoutes)
@@ -27,15 +24,10 @@ app.use("*", (req, res)=>{
     res.render("ruta erronea")
 } )
 
-
-
-
 app.listen(process.env.PORT || 3005, function() {
     console.log("servidor corriendo")
 
 })
-
-
 
 
 /*app.get('/home', (req, res) => {
@@ -56,5 +48,4 @@ app.get('/detalle_producto', (req, res) => {
 
 /*app.get('/login', (req, res) => {
     res.sendFile((__dirname + '/views/login.html'))
-
 })*/
