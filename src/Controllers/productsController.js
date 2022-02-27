@@ -45,7 +45,7 @@ const controlador=
         
         fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
 
-        res.redirect("/")
+        res.redirect("/home")
     },
 
     crear_producto:(req, res)=>{
@@ -72,7 +72,7 @@ const controlador=
         productos.push(productonuevo)
         fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
         
-        res.redirect("/")
+        res.redirect("/home")
         console.log(productonuevo)
 
     },
