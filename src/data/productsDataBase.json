@@ -2,9 +2,9 @@
  {
   "id": 1,
   "name": " Gamer Xtreme VR Gaming PC",
-  "price": "25000",
+  "price": "600000",
   "discount": "23",
-  "category": "electrodomesticos",
+  "category": "",
   "description": "",
   "image": "CYBER_POWER_PC.jpg"
  },
@@ -41,6 +41,42 @@
   "name": "tele",
   "price": "20",
   "discount": "20",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 5,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 6,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 7,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 8,
+  "name": "",
+  "price": "",
+  "discount": "",
   "category": "",
   "description": "",
   "image": "CYBER_POWER_PC.jpg"
