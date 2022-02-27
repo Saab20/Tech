@@ -7,6 +7,27 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controlador=
 {
+
+    home:(req, res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("main/home.ejs", {productos: products})
+    },
+
+    detalle_producto:(req, res)=>{
+        let idproducto= req.params.id;
+        let productoencontrado=null
+
+        for(let p of products ){
+            if (p.id== idproducto){
+
+                productoencontrado=p;
+                break;
+
+            }
+        }
+        res.render("products/detalle_producto.ejs",{productos: productoencontrado})
+    },
+
     editar_producto:(req, res)=>{
         
         let idproducto= req.params.id;
@@ -81,28 +102,6 @@ const controlador=
         res.render("products/carro_de_compras.ejs")
     },
 
-
-
-    home:(req, res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("main/home.ejs", {productos: products})
-    },
-
-    detalle_producto:(req, res)=>{
-        let idproducto= req.params.id;
-        let productoencontrado=null
-
-        for(let p of products ){
-            if (p.id== idproducto){
-
-                productoencontrado=p;
-                break;
-
-            }
-        }
-        res.render("products/detalle_producto.ejs",{productos: productoencontrado})
-    },
-  
 }
 
 module.exports=controlador

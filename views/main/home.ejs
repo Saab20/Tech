@@ -57,13 +57,14 @@
             <div class="container-fluid ">
                 <% for (let p of productos) { %>
                 <div class="card " style="width: 18rem; ">
-                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto">
+                    <a href="/products/detalle_producto/<%=p.id %>">
+                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto"></a>
                     <div class="card-body ">
                         <h4><%=p.name %></h4>
                         <p class="card-text "><%=p.discount %>% descuento</p>
                         <div class="box-price ">
-                            <span class="price1 "><strike>$ <%=p.price1 %></strike></span>
-                            <span class="price2 "><b>$ <%=p.price %></b></span>
+                            <span class="price1 "><strike>$ <%=p.price %></strike></span>
+                            <span class="price2 "><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
                         </div>
                         <!--Boton de compra-->
                         <div class="wrapper ">

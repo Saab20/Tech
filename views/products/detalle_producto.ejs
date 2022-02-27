@@ -23,23 +23,19 @@
                             <div  style="width: 32rem;">
                                 
                                 <div class="card-body">
-                                    <img src="/img/<%=productos.image%>" class="card-img-top" alt="TV samsung 55 pulgadas">
-                                    
-                                    
+                                    <img src="/img/<%=productos.image%>" class="card-img-top" alt="Detalle de Producto">   
                                 </div>
                             </div>
                           </div>
                           <div class="col-6">
                             <div style="width: 35rem;">
-
-                                
+   
                                 <div class="card-body">
                                         
                                     
-                                            <h4>TV samsung 55 pulgadas <%=productos.name %> </h4>
+                                            <h4><%=productos.name %> </h4>
                                             <div class="descripcion">
-                                                <p class="card-text">Tamaño Pantalla del TV (En Pulgadas)
-                                                   55 Pulgadas<%=productos.name %></p>
+                                                <p class="card-text"><%=productos.name %></p>
                                                 <p class="card-text">Tipo de Pantalla del TV o Monitor Mini LED</p>
                                                 <p class="card-text">Resolucion Pantalla del TV o Monitor 4K-UHD</p>
                                         
@@ -47,10 +43,10 @@
                                             </div>
                                             <br>
                                             <div class="box-price">
-                                            <span class="price1"><strike>$<%=productos.price %></strike></span>
-                                            <span class="price2"><b>Descuento:<%=productos.discount %></b></span>
+                                            <span class="price2"><b>Descuento:<%=productos.discount %> % </b></span>
                                             <div>
-                                                <span class="compra">Precio:<%=productos.price-productos.discount %></i></span>
+                                                <span class="price1"><strike>$<%=productos.price %></strike></span>
+                                                <span class="compra"> $<%=productos.price - (productos.discount * productos.price / 100) %></i></span>
                                             </div>
                                             
                                             </div>
