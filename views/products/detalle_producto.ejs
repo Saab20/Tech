@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include("../partials/head", {title: 'Producto'}) %>  
+        <%- include("../partials/head", {title: productos.name}) %>  
     </head>
     <body>
  <!--MENU-->
@@ -23,8 +23,8 @@
                             <div  style="width: 32rem;">
                                 
                                 <div class="card-body">
-                                    <img src="img/tv.webp" class="card-img-top" alt="TV samsung 55 pulgadas">
-                                    <img src="img/tvs.JPG" class="card-img-top" alt="TV samsung 50 pulgadas">
+                                    <img src="/img/<%=productos.image%>" class="card-img-top" alt="TV samsung 55 pulgadas">
+                                    
                                     
                                 </div>
                             </div>
@@ -36,10 +36,10 @@
                                 <div class="card-body">
                                         
                                     
-                                            <h4>TV samsung 55 pulgadas</h4>
+                                            <h4>TV samsung 55 pulgadas <%=productos.name %> </h4>
                                             <div class="descripcion">
                                                 <p class="card-text">Tamaño Pantalla del TV (En Pulgadas)
-                                                   55 Pulgadas</p>
+                                                   55 Pulgadas<%=productos.name %></p>
                                                 <p class="card-text">Tipo de Pantalla del TV o Monitor Mini LED</p>
                                                 <p class="card-text">Resolucion Pantalla del TV o Monitor 4K-UHD</p>
                                         
@@ -47,10 +47,10 @@
                                             </div>
                                             <br>
                                             <div class="box-price">
-                                            <span class="price1"><strike>$9.338</strike></span>
-                                            <span class="price2"><b>Descuento: $6.670</b></span>
+                                            <span class="price1"><strike>$<%=productos.price %></strike></span>
+                                            <span class="price2"><b>Descuento:<%=productos.discount %></b></span>
                                             <div>
-                                                <span class="compra">Precio: $6.670</i></span>
+                                                <span class="compra">Precio:<%=productos.price-productos.discount %></i></span>
                                             </div>
                                             
                                             </div>
@@ -62,7 +62,7 @@
 
                                                  <button type="button" class="btn btn-secondary"> Comprar  </button>
 
-                                                <a href="editar_producto"><button type="button" class="btn btn-secondary ">Editar</button></a>  
+                                                <a href="/products/editar_producto/<%=productos.id %>"><button type="button" class="btn btn-secondary ">Editar</button></a>  
                                             </div>
                                             
                                     </div>

@@ -125,7 +125,7 @@ ul li a {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    border-top: 1px solid #181717;
+    border-top: 1px solid #020111;
     position: relative;
     padding: 10px;
 }
@@ -207,8 +207,8 @@ ul li a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgb(235, 235, 235);
+    flex-wrap:wrap;
+    background-color: rgb(235,235, 235);
 }
 
 #container-registro {
@@ -339,9 +339,10 @@ body {
 }
 
 #main {
+   
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction:row;
+    align-items:center;
     padding: 15px;
 }
 

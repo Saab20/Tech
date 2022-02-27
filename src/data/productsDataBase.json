@@ -1,12 +1,48 @@
 [
-    {
-        "id" : 1,
-        "name" : "CYBERPOWERPC Gamer Xtreme VR Gaming PC",
-        "price" : 2450,
-        "price2" : 3000,
-        "discount": 30,
-        "category": "ofertas",
-        "description" : "Sistema: Intel Core i5-11600KF 3.9GHz 6-Core | Intel B560 Chipset | 16GB DDR4 | 500GB PCI-E NVMe SSD | 1TB HDD | Windows 11 Home 64-bit",
-        "image": "CYBER_POWER_PC.jpg"
-    }
+ {
+  "id": 1,
+  "name": " Gamer Xtreme VR Gaming PC",
+  "price": "25000",
+  "discount": "23",
+  "category": "electrodomesticos",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 2,
+  "name": "TV samsung 55 pulgadas",
+  "price": "23",
+  "discount": "10",
+  "category": "",
+  "description": "",
+  "image": "tv.jpg",
+  "image2": "tvs.jpg"
+ },
+ {
+  "id": 3,
+  "name": "holq",
+  "price": "500006",
+  "discount": "10",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 3,
+  "name": "holq",
+  "price": "50000",
+  "discount": "10",
+  "category": "electrodomesticos",
+  "description": "hola mundo",
+  "image": "CYBER_POWER_PC.jpg"
+ },
+ {
+  "id": 4,
+  "name": "tele",
+  "price": "20",
+  "discount": "20",
+  "category": "",
+  "description": "",
+  "image": "CYBER_POWER_PC.jpg"
+ }
 ]

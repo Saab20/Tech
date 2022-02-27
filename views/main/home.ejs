@@ -53,21 +53,21 @@
                 <a href="/detalle_producto ">Ver historial</a>
             </div>
 
-            <% for (let p of productos) { %>
+            
             <div class="container-fluid ">
-
+                <% for (let p of productos) { %>
                 <div class="card " style="width: 18rem; ">
                     <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto">
                     <div class="card-body ">
                         <h4><%=p.name %></h4>
                         <p class="card-text "><%=p.discount %>% descuento</p>
                         <div class="box-price ">
-                            <span class="price1 "><strike>$ <%=p.price2 %></strike></span>
+                            <span class="price1 "><strike>$ <%=p.price1 %></strike></span>
                             <span class="price2 "><b>$ <%=p.price %></b></span>
                         </div>
                         <!--Boton de compra-->
                         <div class="wrapper ">
-                            <a href="/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
+                            <a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
                         </div>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
                 <a href="/detalle_producto "><Ver >historial</Ver></a>
             </div>
 
-            <% for (let p of productos) { %>
+           
             <div class="container-fluid ">
-
+                <% for (let p of productos) { %>
                 <div class="card " style="width: 18rem; ">
                     <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto">
                     <div class="card-body ">
@@ -147,9 +147,9 @@
                         </div>
                     </div>
                 </div>
-        -->            
+        -->         <% } %>    
             </div>
-            <% } %>
+           
         </section>
 
     </main>
