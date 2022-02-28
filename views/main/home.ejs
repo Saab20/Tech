@@ -47,12 +47,12 @@
 <!--Vitrinas de producto-->
 
         <section class="main" id="main-prod">
-
+            <br>
             <div class=" section-header ">
-                <h3>Ofertas</h3>
-                <a href="/detalle_producto ">Ver historial</a>
+                <h3>Bienvenidos</h3>
+                <a href="/detalle_producto ">Más información</a>
             </div>
-
+            <br>
             
             <div class="container-fluid ">
                 <% for (let p of productos) { %>
@@ -72,83 +72,37 @@
                         </div>
                     </div>
                 </div>
-        <!--
-                <div class="card " style="width: 18rem; ">
-                    <img src="/img/pc gamer.jpg " class="card-img-top " alt="Pc Gamer ">
-                    <div class="card-body ">
-                        <h4>Pc Gamer</h4>
-                        <p class="card-text ">20% descuento</p>
-                        <div class="box-price ">
-                            <span class="price1 "><strike>$6.238</strike></span>
-                            <span class="price2 "><b>$4.670</b></span>
-                            <span class="compra ">$5.670</i></span>
-                        </div>
-                        <div class="wrapper ">
-                            <a href="/detalle_producto " class="button-compra ">Añadir</a>
-                        </div>
-                    </div>
-                </div>
-        -->
-            <% } %>
+
+                <% } %>
             </div>
 
-
+            <br>
             <div class="section-header ">
-                <h3>Basado en tu última visita</h3>
-                <a href="/detalle_producto "><Ver >historial</Ver></a>
+                <h3>¡Destacados en la Tienda!</h3>
+                <h6>No lo dejes pasar.</h6>
             </div>
+           <br>
 
-           
             <div class="container-fluid ">
                 <% for (let p of productos) { %>
                 <div class="card " style="width: 18rem; ">
-                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto">
+                    <a href="/products/detalle_producto/<%=p.id %>">
+                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto"></a>
                     <div class="card-body ">
                         <h4><%=p.name %></h4>
                         <p class="card-text "><%=p.discount %>% descuento</p>
                         <div class="box-price ">
-                            <span class="price1 "><strike>$ <%=p.price2 %></strike></span>
-                            <span class="price2 "><b>$ <%=p.price %></b></span>
+                            <span class="price1 "><strike>$ <%=p.price %></strike></span>
+                            <span class="price2 "><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
                         </div>
                         <!--Boton de compra-->
                         <div class="wrapper ">
-                            <a href="/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
-                        </div>
-                    </div>
-                </div>
-        <!--
-                <div class="card " style="width: 18rem; ">
-                    <img src="/img/pc gamer.jpg " class="card-img-top " alt="Pc Gamer ">
-                    <div class="card-body ">
-                        <h4>Pc Gamer</h4>
-                        <p class="card-text ">20% descuento</p>
-                        <div class="box-price ">
-                            <span class="price1 "><strike>$6.238</strike></span>
-                            <span class="price2 "><b>$4.670</b></span>
-                            <span class="compra ">$5.670</i></span>
-                        </div>
-                        <div class="wrapper ">
-                            <a href="/detalle_producto " class="button-compra ">Añadir</a>
+                            <a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card " style="width: 18rem; ">
-                    <img src="img/tv.webp " class="card-img-top " alt="TV samsung 50 pulgadas ">
-                    <div class="card-body ">
-                        <h4>TV samsung 50 pulgadas</h4>
-                        <p class="card-text ">20% descuento</p>
-                        <div class="box-price ">
-                            <span class="price1 "><strike>$9.338</strike></span>
-                            <span class="price2 "><b>$6.670</b></span>
-                            <span class="compra ">$6.670</i></span>
-                        </div>
-                        <div class="wrapper ">
-                            <a href="/detalle_producto " class="button-compra ">Añadir</a>
-                        </div>
-                    </div>
-                </div>
-        -->         <% } %>    
+                <% } %>
             </div>
            
         </section>
@@ -157,7 +111,7 @@
 </div>
     
 
-    <div>
+<div>
 
 <!--FOOTER-->
  
@@ -165,7 +119,7 @@
     
 <!--FOOTER-->
 
-    </div>
+</div>
     
 </body>
 

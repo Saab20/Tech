@@ -219,6 +219,18 @@ ul li a {
     background-color: rgb(235, 235, 235);
 }
 
+/*Titulos de las vitrinas de producto*/
+.section-header {
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
 .card {
     padding: 10px 15px;
     margin: 15px 10px;
@@ -332,7 +344,6 @@ body {
 }
 
 #main-prod {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;

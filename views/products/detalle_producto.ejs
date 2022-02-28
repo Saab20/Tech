@@ -15,61 +15,64 @@
 
 
             <div class="container">
-                 <div>
+                <div>
                             
-                    </div>
-                     <div class="row align-items-start">
-                        <div class="col">
-                            <div  style="width: 32rem;">
+                </div>
+                <div class="row align-items-start">
+                    <div class="col">
+                        <div  style="width: 32rem;">
                                 
-                                <div class="card-body">
-                                    <img src="/img/<%=productos.image%>" class="card-img-top" alt="Detalle de Producto">   
-                                </div>
+                            <div class="card-body">
+                                <img src="/img/<%=productos.image%>" class="card-img-top" alt="Detalle de Producto">   
                             </div>
-                          </div>
-                          <div class="col-6">
-                            <div style="width: 35rem;">
-   
-                                <div class="card-body">
-                                        
-                                    
-                                            <h4><%=productos.name %> </h4>
-                                            <div class="descripcion">
-                                                <p class="card-text"><%=productos.name %></p>
-                                                <p class="card-text">Tipo de Pantalla del TV o Monitor Mini LED</p>
-                                                <p class="card-text">Resolucion Pantalla del TV o Monitor 4K-UHD</p>
-                                        
-                                                <p class="card-text">Garantia del Fabricante  12 Meses</p>
-                                            </div>
-                                            <br>
-                                            <div class="box-price">
-                                            <span class="price2"><b>Descuento:<%=productos.discount %> % </b></span>
-                                            <div>
-                                                <span class="price1"><strike>$<%=productos.price %></strike></span>
-                                                <span class="compra"> $<%=productos.price - (productos.discount * productos.price / 100) %></i></span>
-                                            </div>
-                                            
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <div class="d-grid gap-2 d-md-block">
-
-                                                <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
-
-                                                 <button type="button" class="btn btn-secondary"> Comprar  </button>
-
-                                                <a href="/products/editar_producto/<%=productos.id %>"><button type="button" class="btn btn-secondary ">Editar</button></a>  
-                                            </div>
-                                            
-                                    </div>
-                          
-                          </div>
-                        </div>
-
                         </div>
                     </div>
-                    
+                    <div class="col-6">
+                        <div style="width: 35rem;">
+   
+                            <div class="card-body">
+                                        
+                                <h4><%=productos.name %> </h4>
+                                <div class="descripcion">
+                                    <p class="card-text"><%=productos.name %></p>
+                                    <p class="card-text">Tipo de Pantalla del TV o Monitor Mini LED</p>
+                                    <p class="card-text">Resolucion Pantalla del TV o Monitor 4K-UHD</p>
+                                    <p class="card-text">Garantia del Fabricante  12 Meses</p>
+                                </div>
+                                            <br>
+                                <div class="box-price">
+                                    <span class="price2"><b>Descuento:<%=productos.discount %> % </b></span>
+                                        <div>
+                                            <span class="price1"><strike>$<%=productos.price %></strike></span>
+                                            <span class="compra"> $<%=productos.price - (productos.discount * productos.price / 100) %></i></span>
+                                        </div>
+                                            
+                                </div>
+                                            <br>
+                                            <br>
+                                <div class="d-grid gap-2 d-md-block">
+
+                                    <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
+
+                                    <button type="button" class="btn btn-secondary"> Comprar Ahora  </button>
+
+                                    <a href="/products/editar_producto/<%=productos.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
+
+                                    <form action="/products/delete/<%=productos.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                                        <button type="submit" class="btn btn-secondary">Eliminar Producto</button>
+                                    </form>
+
+                                </div>
+                                            
+                            </div>
+                          
+                        </div>
+                    </div>
+
+                </div>
             </div>
+                    
+        </div>
 
                 
 
