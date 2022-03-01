@@ -2,69 +2,11 @@
  {
   "id": 2,
   "name": "TV samsung 55 pulgadas",
-<<<<<<< HEAD
-  "price": "10",
-=======
   "price": "60000",
->>>>>>> 8464ce6d12112d6ba7620d39b0491d242f63934a
   "discount": "10",
   "category": "",
-  "description": "",
+  "description": "televisor 55 pulgadas hdmi salidas entradas garantia 12 meses\r\ncolor rojo\r\ncolor negro\r\nazul amarillo\r\ntamañao pequeño degado ",
   "image": "tv.jpg",
   "image2": "tvs.jpg"
- },
- {
-  "id": 5,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 6,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 7,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 8,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 9,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 10,
-  "name": "",
-  "price": "",
-  "discount": "",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
  }
 ]

@@ -53,12 +53,12 @@ const controlador=
 
         for(let p of productos ){
             if (p.id== idbuscado){
-                p.name=productosEditado.name
-                p.price=productosEditado.price
-                p.price2=productosEditado.price2
-                p.discount=productosEditado.discount
-                p.category=productosEditado.category
-                p.description=productosEditado.description
+                p.name=productoseditado.name
+                p.price=productoseditado.price
+                p.price2=productoseditado.price2
+                p.discount=productoseditado.discount
+                p.category=productoseditado.category
+                p.description=productoseditado.description
                 break;
 
             }
@@ -75,26 +75,38 @@ const controlador=
     },
 
     tienda:(req, res)=>{
-        res.render("products/crear_producto.ejs")
+
+        idNuevo=0;
+
+		for (let s of products){
+			if (idNuevo<s.id){
+				idNuevo=s.id;
+			}
+		}
+
+		idNuevo++;
+
+		let nombreImagen = req.file.filename;
+        
         let productos=products
         let idnuevo=products[productos.length-1].id+1
 
         let productonuevo={
         id : idnuevo,
-        name : req.body.name,
+        name : req.body,
         price : req.body.price,
         price2 : req.body.price2,
         discount: req.body.discount,
         category: req.body.category,
         description : req.body.description,
-        image: "CYBER_POWER_PC.jpg"
+        image: nombreImagen
 
         }
         productos.push(productonuevo)
         fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
         
         res.redirect("/")
-       //console.log(productonuevo)
+       console.log(productonuevo)
 
     },
 
@@ -117,7 +129,7 @@ const controlador=
             let productos2 = products.filter(function(e){
                 return e.id!=productoEncontrado.id;
             })
-    
+            fs.unlinkSync(path.join(__dirname, '../../public/img', productoEncontrado.image));
             fs.writeFileSync(productsFilePath, JSON.stringify(productos2,null,' '));
     
             res.redirect("/");

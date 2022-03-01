@@ -125,7 +125,7 @@ ul li a {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    border-top: 1px solid #020111;
+    border-top: 1px solid #031101;
     position: relative;
     padding: 10px;
 }
@@ -206,15 +206,17 @@ ul li a {
 .container-fluid {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:flex-start;
     flex-wrap:wrap;
     background-color: rgb(235,235, 235);
+   
 }
 
 #container-registro {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
     flex-wrap: wrap;
     background-color: rgb(235, 235, 235);
 }
@@ -234,6 +236,7 @@ ul li a {
 .card {
     padding: 10px 15px;
     margin: 15px 10px;
+    
 }
 
 .card-body {
@@ -241,6 +244,7 @@ ul li a {
     flex-direction: column;
     align-self: center;
     justify-content: center;
+    
 }
 
 footer {
@@ -451,3 +455,10 @@ body {
 .container.products-wrapper.mt-5.form {
     margin-top: 5rem !important;
 }
+
+textarea.form-input {
+    min-height: 20px;
+    min-width: 500px;
+    resize: vertical;
+    padding: 15px;
+  }
