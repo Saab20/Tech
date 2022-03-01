@@ -16,7 +16,7 @@ header {
 
 .top-header {
     
-    display:inline;
+    display:flex;
     justify-content:space-between ;
     align-items:flex-end;
     height: 50px;
