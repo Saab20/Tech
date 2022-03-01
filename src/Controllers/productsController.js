@@ -7,20 +7,41 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controlador=
 {
-    editar_producto:(req, res)=>{
-        
-        let idproducto= req.params.id;
-        let productoencontrado=null
+
+    home:(req, res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("home", {productos: products})
+    },
+
+    detalle_producto:(req, res)=>{
+        let idProducto= req.params.id;
+        let productoEncontrado=null
 
         for(let p of products ){
-            if (p.id== idproducto){
+            if (p.id== idProducto){
 
-                productoencontrado=p;
+                productoEncontrado=p;
                 break;
 
             }
         }
-        res.render("products/editar_producto.ejs",{productos: productoencontrado})
+        res.render("products/detalle_producto.ejs",{productos: productoEncontrado})
+    },
+
+    editar_producto:(req, res)=>{
+        
+        let idProducto= req.params.id;
+        let productoEncontrado=null
+
+        for(let p of products ){
+            if (p.id== idProducto){
+
+                productoEncontrado=p;
+                break;
+
+            }
+        }
+        res.render("products/editar_producto.ejs",{productos: productoEncontrado})
         
     },
 
@@ -32,12 +53,12 @@ const controlador=
 
         for(let p of productos ){
             if (p.id== idbuscado){
-                p.name=productoseditado.name
-                p.price=productoseditado.price
-                p.price2=productoseditado.price2
-                p.discount=productoseditado.discount
-                p.category=productoseditado.category
-                p.description=productoseditado.description
+                p.name=productosEditado.name
+                p.price=productosEditado.price
+                p.price2=productosEditado.price2
+                p.discount=productosEditado.discount
+                p.category=productosEditado.category
+                p.description=productosEditado.description
                 break;
 
             }
@@ -73,7 +94,7 @@ const controlador=
         fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
         
         res.redirect("/")
-        console.log(productonuevo)
+       //console.log(productonuevo)
 
     },
 
@@ -81,28 +102,27 @@ const controlador=
         res.render("products/carro_de_compras.ejs")
     },
 
-
-
-    home:(req, res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("main/home.ejs", {productos: products})
-    },
-
-    detalle_producto:(req, res)=>{
-        let idproducto= req.params.id;
-        let productoencontrado=null
-
-        for(let p of products ){
-            if (p.id== idproducto){
-
-                productoencontrado=p;
+        // Delete - Borrar un producto
+    destroy : (req, res) => {
+        let idProductoSeleccionado = req.params.id;
+        let productoEncontrado=null;
+    
+        for (let p of products){
+            if (p.id==idProductoSeleccionado){
+                productoEncontrado=p;
                 break;
-
+                }
             }
+    
+            let productos2 = products.filter(function(e){
+                return e.id!=productoEncontrado.id;
+            })
+    
+            fs.writeFileSync(productsFilePath, JSON.stringify(productos2,null,' '));
+    
+            res.redirect("/");
         }
-        res.render("products/detalle_producto.ejs",{productos: productoencontrado})
-    },
-  
-}
+};
+    
 
 module.exports=controlador

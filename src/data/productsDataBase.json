@@ -1,49 +1,17 @@
 [
  {
-  "id": 1,
-  "name": " Gamer Xtreme VR Gaming PC",
-  "price": "600000",
-  "discount": "23",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
   "id": 2,
   "name": "TV samsung 55 pulgadas",
+<<<<<<< HEAD
   "price": "10",
+=======
+  "price": "60000",
+>>>>>>> 8464ce6d12112d6ba7620d39b0491d242f63934a
   "discount": "10",
   "category": "",
   "description": "",
   "image": "tv.jpg",
   "image2": "tvs.jpg"
- },
- {
-  "id": 3,
-  "name": "holq",
-  "price": "500006",
-  "discount": "10",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 3,
-  "name": "holq",
-  "price": "50000",
-  "discount": "10",
-  "category": "electrodomesticos",
-  "description": "hola mundo",
-  "image": "CYBER_POWER_PC.jpg"
- },
- {
-  "id": 4,
-  "name": "tele",
-  "price": "20",
-  "discount": "20",
-  "category": "",
-  "description": "",
-  "image": "CYBER_POWER_PC.jpg"
  },
  {
   "id": 5,

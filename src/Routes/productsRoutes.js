@@ -15,4 +15,7 @@ router.post("/tienda",productsController.tienda)
 router.get("/editar_producto/:id",productsController.editar_producto)
 router.put("/editar_producto/:id",productsController.update)
 
+// /*** ENRUTADOR PARA BORRAR UN PRODUCTO***/ 
+router.delete('/delete/:id', productsController.destroy);
+
 module.exports=router
