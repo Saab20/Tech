@@ -93,7 +93,7 @@ const controlador=
 
         let productonuevo={
         id : idnuevo,
-        name : req.body,
+        name : req.body.name,
         price : req.body.price,
         price2 : req.body.price2,
         discount: req.body.discount,
