@@ -1,12 +1,43 @@
 [
  {
-  "id": 2,
+  "id": 1,
   "name": "TV samsung 55 pulgadas",
-  "price": "60000",
+  "price": "600000",
   "discount": "10",
   "category": "",
   "description": "televisor 55 pulgadas hdmi salidas entradas garantia 12 meses\r\ncolor rojo\r\ncolor negro\r\nazul amarillo\r\ntamañao pequeño degado ",
   "image": "tv.jpg",
   "image2": "tvs.jpg"
- }
+ },
+ {
+    "id": 2,
+    "name": "Pc gamer",
+    "price": "5500000",
+    "discount": "10",
+    "category": "",
+    "description": "Pc gamer ultima generacion, disco duro 1TB, Ram 16Gb, tarjeta video independiente",
+    "image": "CYBER_POWER_PC.jpg",
+    "image2": "tvs.jpg"
+   },
+   {
+    "id": 3,
+    "name": "Iphone 12",
+    "price": "4200000",
+    "discount": "5",
+    "category": "",
+    "description": "Iphone 12, 128GB de capacidad de almacenamiento, Color azul",
+    "image": "celular.jpg",
+    "image2": "tvs.jpg"
+   },
+   {
+    "id": 3,
+    "name": "Nintendo Switch Lite",
+    "price": "1150000",
+    "discount": "0",
+    "category": "",
+    "description": "Nintendo Switch Litewebp, 128GB de capacidad de almacenamiento, Color azul",
+    "image": "Nintendo_Switch_Lite.webp",
+    "image2": "tvs.jpg"
+   }
+   
 ]
