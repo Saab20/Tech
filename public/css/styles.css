@@ -45,6 +45,7 @@ header {
     display: none;
 }*/
 
+/* CSS html header- Div del Contenedores del menu */
 .menu_hamburguesa{
     padding: 10px 0px;
 }
@@ -174,9 +175,10 @@ header {
 .container-fluid {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-around;
     flex-wrap:wrap;
     background-color: rgb(235,235, 235);
+   
 }
 
 /*CSS html home- Titulos vitrina de producto*/
