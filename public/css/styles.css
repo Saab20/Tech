@@ -152,6 +152,92 @@ header {
     border: 15px solid #ffffff;
 }
 
+/* CSS html pagina home */
+
+/*CSS html home, section main*/
+.section_products_home {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
+    /*CSS html home- Titulos vitrina de producto*/
+    .section-header-home {
+        padding: 0 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .container-fluid-home{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        background-color: rgb(235,235, 235);
+    }
+
+    .card-product-home {
+        padding: 5px 10px;
+        margin: 15px 10px;
+        width: 18rem;
+        height: 26rem;
+        background-color: white;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-img-product-home{
+        height: 55%;
+        overflow: hidden;
+        background-color: white;
+        position:relative;
+        display: flex;
+        align-self: center;
+        margin: auto;
+        background-position: center;
+	    background-size: cover;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .card-img-product-home img {
+        width: 100%;
+        height: auto;
+    }
+    @supports(object-fit: cover){
+        .box img{
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+    }
+
+    .card-body-home {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content:center;
+        text-align:center;
+        height: auto;
+        width: 98%;
+        background-color: white;
+    }
+    
+    /* Boton Añadir producto */
+    .wrapper-button-compra-home {
+        margin-top: 5px;
+        display: flex;
+        text-align: center;
+        position: relative;
+        left: 25%;
+     }
+
 /* CSS html register */
 .main_register {
     text-align:justify;
@@ -171,7 +257,7 @@ header {
     background-color: rgb(235, 235, 235);
 }
 
-/* CSS html home- contenedor de productos */
+/* CSS html detalle de producto- contenedor de productos */
 .container-fluid {
     display: flex;
     flex-direction: row;
@@ -181,25 +267,13 @@ header {
    
 }
 
-/*CSS html home- Titulos vitrina de producto*/
-.section-header {
-    padding: 0 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-  }
-
-  /*CSS html home- Targeta de producto*/
+  /*CSS html detalle de producto- Targeta de producto*/
 .card {
     padding: 10px 15px;
     margin: 15px 10px;
     
 }
-
+  /*CSS html detalle de producto- Targeta de producto*/
 .card-body {
     display: flex;
     flex-direction: column;
@@ -296,13 +370,6 @@ li a i {
 .button-compra before {
     transform: skewX(-45deg) translateX(13.5em);
     transition: all 0.5s ease-in-out;
-}
-
-/*CSS html home, section main*/
-.section_products {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
 }
 
 /*CSS html register*/

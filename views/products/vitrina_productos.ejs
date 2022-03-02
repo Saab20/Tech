@@ -1,0 +1,58 @@
+«<!DOCTYPE html>
+<html lang="en">
+
+<!-- Include Head -->
+<head>
+    <%- include("../partials/head", {title: productos.name}) %>
+</head>
+<body>
+	<!-- Header -->
+	<header>
+	<%- include("../partials/header") %>
+    </header>
+	<!-- /Header -->
+
+	<!-- todos los productos -->
+
+	<h3>Todos los Productos</h3>
+
+	<br>
+		<div class=" section-header-home ">
+			<h3>Todos los Productos</h3>
+		</div>
+		<br>
+		
+		<div class="container-fluid-home">
+			<% for (let p of productos) { %>
+			<div class="card-product-home">
+				<div class="card-img-product-home">
+					 <a href="/products/detalle_producto/<%=p.id %>">
+					<img src="/img/<%=p.image %>" class="card-img-top-home" alt="Imagen de producto"></a>
+				</div>
+				<div class="card-body-home">
+					<h4><%=p.name %></h4>
+					<p class="card-text "><%=p.discount %>% descuento</p>
+					<div class="box-price ">
+						<span class="price1 "><strike>$ <%=p.price %></strike></span>
+						<span class="price2 "><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
+					</div>
+					<!--Boton de compra-->
+					<div class="wrapper-button-compra-home">
+						<a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
+					</div>
+				</div>
+			</div>
+
+			<% } %>
+		</div>
+
+
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<footer>
+		<%- include("../partials/footer") %>  
+    </footer>
+	<!-- /footer -->
+</body>	
+</html>
