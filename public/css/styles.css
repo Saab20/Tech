@@ -142,15 +142,6 @@ ul li a {
     margin: 0 auto;
 }
 
-.boton {
-    width: 100%;
-    font-size: 16px;
-    font-weight: normal;
-    display: none;
-    text-align: left;
-    right: 80px;
-    top: 60px;
-}
 
 .descripcion {
     display: block;
@@ -206,7 +197,7 @@ ul li a {
 .container-fluid {
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    justify-content:space-around;
     flex-wrap:wrap;
     background-color: rgb(235,235, 235);
    
@@ -243,7 +234,9 @@ ul li a {
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: center;
+    justify-content:center;
+    background-color: rgb(255, 255, 255);
+   
     
 }
 
@@ -456,9 +449,3 @@ body {
     margin-top: 5rem !important;
 }
 
-textarea.form-input {
-    min-height: 20px;
-    min-width: 500px;
-    resize: vertical;
-    padding: 15px;
-  }
