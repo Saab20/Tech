@@ -24,7 +24,7 @@
                 <Br>
         </div>
         <div class="col-12">
-            <form action="/products/tienda" method="POST">
+            <form action="/products/tienda" method="POST" enctype="multipart/form-data">
                 <div class="row product-detail">
                     <div class="col-12 col-md-6">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -51,13 +51,27 @@
                             <option value="Conectividad">Conectividad</option>
                     </select>
                     </div>
+                    
+                
+                    <br>
                     <div class="col-12">
                         <label for="description" class="form-label">Descipción:</label>
                         <textarea name="description" id="description" class="form-input"></textarea>
+                        
                     </div>
+                    
+                    <br>
+                    <br>
+                    <div class="col-12 col-md-6">
+                        <label for="imageproduct" class="form-label">Seleccionar imagen:</label>
+                        <input type="file" name="imageproduct" id="imageproduct" multiple>
+                    </div>
+                    <br>
+                    <br>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Guardar producto</button>
                     </div>
+                    
                 </div>
             </form>
         </div>

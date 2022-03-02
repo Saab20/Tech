@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include("../partials/head",{title: 'Registrar'}) %>
+    <%- include("../partials/head",{title: 'registrarse'}) %>
 
 </head>
 
@@ -15,37 +15,37 @@
     <!--MENU-->
     <main class="main_register">
 
-        <form class="container_register">
+        <form class="container_register" action="/users/nuevousuario" method="POST"> 
             <h2 class="form_title"> Registrate</h2>
             <p class="form_paragraph">¿Aún no tienes una cuenta?</p>
 
-            <div class="form_container">
+            <div class="form_container" action="/users/nuevousuario" method="POST">
                 <div class="form_group">
-                    <input type="text" id="name" class="form_input" placeholder=" ">
+                    <input type="text" id="name" name="name"class="form_input" placeholder=" ">
                     <label for="name" class="form_label">Nombre</label>
                     <span class="form_line"></span>
                 </div>
 
                 <div class="form_group">
-                    <input type="text" id="user" class="form_input" placeholder=" ">
+                    <input type="text" id="user" name="user"class="form_input" placeholder=" ">
                     <label for="user" class="form_label">Usuario</label>
                     <span class="form_line"></span>
                 </div>
 
                 <div class="form_group">
-                    <input type="email" id="email" class="form_input" placeholder=" ">
+                    <input type="email" id="email" name="email" class="form_input" placeholder=" ">
                     <label for="email" class="form_label">e-mail</label>
                     <span class="form_line"></span>
                 </div>
 
                 <div class="form_group">
-                    <input type="tel" id="tel" class="form_input" placeholder=" ">
+                    <input type="tel" id="tel" name="tel" class="form_input" placeholder=" ">
                     <label for="tel" class="form_label">Telefono</label>
                     <span class="form_line"></span>
                 </div>
 
                 <div class="form_group">
-                    <input type="password" id="password" class="form_input" placeholder=" ">
+                    <input type="password" id="password" name="password" class="form_input" placeholder=" ">
                     <label for="password" class="form_label">Contraseña</label>
                     <span class="form_line"></span>
                 </div>

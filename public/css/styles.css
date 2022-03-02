@@ -165,6 +165,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
     flex-wrap: wrap;
     background-color: rgb(235, 235, 235);
 }
@@ -194,13 +195,17 @@ header {
 .card {
     padding: 10px 15px;
     margin: 15px 10px;
+    
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: center;
+    justify-content:center;
+    background-color: rgb(255, 255, 255);
+   
+    
 }
 
 /*CSS html footer*/

@@ -20,7 +20,7 @@
                 </div>
                 <div class="row align-items-start">
                     <div class="col">
-                        <div  style="width: 32rem;">
+                        <div  style="width: 30rem;">
                                 
                             <div class="card-body">
                                 <img src="/img/<%=productos.image%>" class="card-img-top" alt="Detalle de Producto">   
@@ -28,16 +28,15 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div style="width: 35rem;">
+                        <div style="width: 50rem;">
    
                             <div class="card-body">
                                         
                                 <h4><%=productos.name %> </h4>
                                 <div class="descripcion">
-                                    <p class="card-text"><%=productos.name %></p>
-                                    <p class="card-text">Tipo de Pantalla del TV o Monitor Mini LED</p>
-                                    <p class="card-text">Resolucion Pantalla del TV o Monitor 4K-UHD</p>
-                                    <p class="card-text">Garantia del Fabricante  12 Meses</p>
+                                
+                                    <p class="card-text"><%=productos.description %></p>
+                                   
                                 </div>
                                             <br>
                                 <div class="box-price">
@@ -54,7 +53,7 @@
 
                                     <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
 
-                                    <button type="button" class="btn btn-secondary"> Comprar Ahora  </button>
+                                    <button type="button" class="btn btn-secondary ">Editar producto</button>
 
                                     <a href="/products/editar_producto/<%=productos.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
 
