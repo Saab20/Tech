@@ -1,27 +1,45 @@
-<div class="cont-header">
+<header class="cont-header">
 
-    <div class="top-header d-flex justify-content-between">
-        <a href="/"><img class="logo" width="50px" height="50px" src="/img/logo.jpg" alt="logo-tech"></a>
+    <div class="top-header justify-content-between">
+
+        <a href="/"><img class="logo" width="65px" height="65px" src="/img/logo.jpg" alt="logo-tech"></a>
         
-        <div class="nav d-flex flex-warp login">
-            <ul>
+        <div class="menu_hamburguesa">
+        <button class="btn-toggle-navbar">
+			<i class="fas fa-bars" id="btn-toggle-navbar"></i>
+        </button>
+
+        <nav class="nav_header">
+            <ul class="menu_header">
                 <li><a href="/">Inicio</a></li>
+                <li><a href="">Productos</a>
+                    <ul class="nav_desplegable">
+                         <li><a href="/productos">Todos los productos</a></li>
+                         <li><a href="">Computadoras</a></li>
+                         <li><a href="">Televisores</a></li>
+                         <li><a href="">Smartphones</a></li>
+                         <li><a href="">Pc Gamer armada</a></li>
+                         <li><a href="">Consolas</a></li>
+                         <li><a href="">Auriculares, parlantes y audio</a></li>
+                         <li><a href="">Conectividad</a></li>
+                         <li><a href="">Electrodomesticos</a></li>
+                    </ul></li>
                 <li><a href="">Acerca</a></li>
-                <li><a href="">Computadoras</a></li>
-                <li><a href="">Televisores</a></li>
-                <li><a href="">Celulares</a></li>
-                <li><a href="/users/register">Creá tu cuenta</a></li>
-                <li><a href="/products/crear_producto">Cargar producto</a></li>
+                <li><a href="/products/crear_producto">Cargar Producto</a></li>
+                <li><a href="/users/register">Regístrate</a></li>
                 <li><a href="/users/login">Ingresá</a></li>
-                <li><a href="/products/carro_de_compras">Mi Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                <li><a href="/products/carro_de_compras">Carrito<i class="fa-regular fa-cart-shopping fa-1x" style="color: black"></i></a></li>
             </ul>
-        </div>
-        <div class="search-form ">
-            <form class="d-flex search-form ">
-                <input class="form-control me- buscador " type="search " placeholder="Search " aria-label="Search ">
-                <button class="btn btn-outline-success m-1 " type="submit ">Search</button>
+        </nav>
+
+    </div>
+
+        <div class="search-form">
+            <form action="/search" method="GET" class=" search-form ">
+                <input class="input_buscador" type="search " placeholder="Buscar Producto" aria-label="Search ">
+                <button class="btn btn-outline-success m-1 " type="submit "><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
-</div>
-</div>
+
+</header>
