@@ -133,7 +133,11 @@ const controlador=
             fs.writeFileSync(productsFilePath, JSON.stringify(productos2,null,' '));
     
             res.redirect("/");
-        }
+        },
+
+    vitrina_productos:(req, res)=>{
+            res.render("products/vitrina_productos.ejs", {productos: products})  
+        },
 };
     
 

@@ -36,4 +36,7 @@ router.put("/editar_producto/:id",productsController.update)
 // /*** ENRUTADOR PARA BORRAR UN PRODUCTO***/ 
 router.delete('/delete/:id', productsController.destroy);
 
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS***/ 
+router.get("/vitrina_productos",productsController.vitrina_productos)
+
 module.exports=router

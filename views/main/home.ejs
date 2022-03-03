@@ -46,20 +46,22 @@
 
 <!--Vitrinas de producto-->
 
-        <section class="main" id="main-prod">
+        <section class="section_products_home">
             <br>
-            <div class=" section-header ">
+            <div class=" section-header-home ">
                 <h3>Bienvenidos</h3>
                 <a href="/detalle_producto ">Más información</a>
             </div>
             <br>
             
-            <div class="container-fluid ">
+            <div class="container-fluid-home">
                 <% for (let p of productos) { %>
-                <div class="card " style="width: 18rem; ">
-                    <a href="/products/detalle_producto/<%=p.id %>">
-                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto"></a>
-                    <div class="card-body ">
+                <div class="card-product-home">
+                    <div class="card-img-product-home">
+                         <a href="/products/detalle_producto/<%=p.id %>">
+                        <img src="/img/<%=p.image %>" class="card-img-top-home" alt="Imagen de producto"></a>
+                    </div>
+                    <div class="card-body-home">
                         <h4><%=p.name %></h4>
                         <p class="card-text "><%=p.discount %>% descuento</p>
                         <div class="box-price ">
@@ -67,7 +69,7 @@
                             <span class="price2 "><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
                         </div>
                         <!--Boton de compra-->
-                        <div class="wrapper ">
+                        <div class="wrapper-button-compra-home">
                             <a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
                         </div>
                     </div>
@@ -77,33 +79,35 @@
             </div>
 
             <br>
-            <div class="section-header ">
+            <div class="section-header-home">
                 <h3>¡Destacados en la Tienda!</h3>
                 <h6>No lo dejes pasar.</h6>
             </div>
            <br>
 
-            <div class="container-fluid ">
-                <% for (let p of productos) { %>
-                <div class="card " style="width: 18rem; ">
-                    <a href="/products/detalle_producto/<%=p.id %>">
-                    <img src="/img/<%=p.image %>" class="card-img-top " alt="Imagen de producto"></a>
-                    <div class="card-body ">
-                        <h4><%=p.name %></h4>
-                        <p class="card-text "><%=p.discount %>% descuento</p>
-                        <div class="box-price ">
-                            <span class="price1 "><strike>$ <%=p.price %></strike></span>
-                            <span class="price2 "><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
-                        </div>
-                        <!--Boton de compra-->
-                        <div class="wrapper ">
-                            <a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
-                        </div>
+           <div class="container-fluid-home">
+            <% for (let p of productos) { %>
+            <div class="card-product-home">
+                <div class="card-img-product-home">
+                     <a href="/products/detalle_producto/<%=p.id %>">
+                    <img src="/img/<%=p.image %>" class="card-img-top-home" alt="Imagen de producto"></a>
+                </div>
+                <div class="card-body-home">
+                    <h4><%=p.name %></h4>
+                    <p class="card-text-home"><%=p.discount %>% descuento</p>
+                    <div class="box-price-home">
+                        <span class="price1-home"><strike>$ <%=p.price %></strike></span>
+                        <span class="price2-home"><b>$  $<%=p.price - (p.discount * p.price / 100) %></b></span>
+                    </div>
+                    <!--Boton de compra-->
+                    <div class="wrapper-button-compra-home">
+                        <a href="/products/detalle_producto/<%=p.id %>" class="button-compra ">Añadir</a>
                     </div>
                 </div>
-
-                <% } %>
             </div>
+
+            <% } %>
+        </div>
            
         </section>
 
@@ -111,7 +115,7 @@
 </div>
     
 
-<div>
+<footer>
 
 <!--FOOTER-->
  
@@ -119,7 +123,7 @@
     
 <!--FOOTER-->
 
-</div>
+</footer>
     
 </body>
 

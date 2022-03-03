@@ -1,15 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "TV samsung 55 pulgadas",
-  "price": "6000000",
-  "discount": "10",
-  "category": "",
-  "description": "televisor 55 pulgadas hdmi salidas entradas garantia 12 meses\r\ncolor rojo\r\ncolor negro\r\nazul amarillo\r\ntamañao pequeño degado ",
-  "image": "tv.jpg",
-  "image2": "tvs.jpg"
- },
- {
   "id": 2,
   "name": "Pc gamer",
   "price": "5500000",
@@ -38,5 +28,14 @@
   "description": "Nintendo Switch Litewebp, 128GB de capacidad de almacenamiento, Color azul",
   "image": "Nintendo_Switch_Lite.webp",
   "image2": "tvs.jpg"
+ },
+ {
+  "id": 5,
+  "name": "TV samsung 50\" QLED UHD 4K Smart ",
+  "price": "999990",
+  "discount": "20",
+  "category": "Electrodomesticos",
+  "description": "TV 50\" QLED UHD 4K Smart Q60A",
+  "image": "1646196765132tv.webp"
  }
 ]

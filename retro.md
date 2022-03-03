@@ -43,4 +43,29 @@ Entrega de spring 3.
 
 15/02/2022
 
-Pensiente ajustar css de los formularios.
+Pendiente ajustar css de los formularios.
+
+23-feb-2022
+Sprint 4
+
+Reunión de retrospectiva
+La realización de CRUD (JSON y HTTP Methods) en el proyecto, se realizará de manera grupal.
+El archivo de productos basado en el modelo de archivos JSON, contendrá: id, nombre del producto, descripción, precio, descuento, imagen, categoría
+El archivo de usuarios (en formato JSON). Contendrá los datos de id, nombre, apellido, email, password, telefono, imagen
+Ver clase de CRUD y la siguiente reunión se realizará el 26 de febrero
+
+23-feb-2022
+El CRUD de producto se Genera de la siguiente forma:
+Se crean las siguientes rutas:
+•	/ —> Vista del home
+•	/ products/vitrina_productos (GET) —> Vista de Listado de productos
+•	/ products/crear_producto (GET) —> Formulario de creación de productos
+•	/products/detalle_producto/:id (GET) —> Vista de Detalle de un producto particular
+•	/products/ crear_producto (POST) —> Acción de creación (almacenamiento de producto luego de creación)
+•	/products/editar_producto/:id (GET) —> Formulario de edición de productos
+•	/products/ editar_producto/:id (PUT) —> Acción de edición (almacenamiento de producto luego de creación)
+•	/products/:id (DELETE) —> Acción de eliminación de un producto
+
+28-feb-2022
+Multer (Sergio)
+Se implementa multer en el proyecto para poder almacenar imágenes físicamente y poder mostrarlas.
