@@ -41,7 +41,7 @@ const controlador=
         usuarios.push(usuarionuevo)
         fs.writeFileSync(usersFilePath,JSON.stringify(usuarios,null,' '))
         
-        res.redirect("/")
+        res.redirect("/users/login")
        console.log(usuarionuevo)
 
     },
