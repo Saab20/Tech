@@ -6,6 +6,12 @@
   "email": "ser@gmail.com",
   "tel": 123123,
   "password": 1212
+ },
+ {
+  "id": 2,
+  "name": "",
+  "email": "",
+  "tel": "",
+  "password": ""
  }
- 
 ]
