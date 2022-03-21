@@ -4,6 +4,7 @@
     padding: 0px;
     box-sizing: border-box;
     outline: 0;
+    
 }
 
 /* CSS Body */
@@ -16,7 +17,7 @@ body {
 
 /* CSS html header */
 header {
-    background-color: rgb(180, 180, 178);
+    background-color: rgb(56, 56, 56);
     position:fixed;
     top: 0%;
     margin: auto;
@@ -33,11 +34,13 @@ header {
     align-items:flex-end;
     width: 100%;
     align-items: flex-start 
+    
 }
 
 .cont-header{
     display: flex;
     align-items: flex-start;
+    
 }
 
 /* CSS html header- Ocultar el menu *//*
@@ -57,33 +60,42 @@ header {
 /* CSS html header, Listas del navbar*/
 .nav_header{
     align-items: center;
-    background-color: rgb(180, 180, 178);
+    background-color: rgb(56, 56, 56);
     display: flex;
 }
 
 .nav_header ul li {
     list-style: none;
     padding: 0 5px;
+    
 }
 
 .nav_header ul li a {
     padding: 5px 3px;
-    color: black ;
+    color: rgb(255, 255, 255) ;
     text-decoration: none;
     display: block;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(56, 56, 56);
+    font-size: 19px;
+
 }
 
 .nav_header ul li a:hover {
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(143, 143, 143);
+    border-radius: 19%;
 }
 
 .nav_header ul li:hover > ul {
     display:block;
+    
   }
 
 .nav_desplegable ul li {
     list-style: none;
     padding: 10px 10px;
+    
+
 }
 
 .nav_desplegable {
@@ -99,12 +111,13 @@ header {
 
 .nav_header ul li ul{
     position: relative;
+    
 }
 
 .nav_desplegable li a {
     line-height:120%;
     margin: 5px;
-    background-color: rgb(182, 180, 178);
+    background-color: rgb(216, 137, 10);
   }
 
   /* CSS html header, aplica al botton de buscar producto*/
@@ -170,6 +183,7 @@ header {
         flex-direction: column;
         text-align: center;
         justify-content: space-evenly;
+        background-color: rgb(255, 255, 255);
     }
 
     .container-fluid-home{
@@ -177,7 +191,9 @@ header {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap:wrap;
-        background-color: rgb(235,235, 235);
+        background-color: rgb(27, 72, 104);
+        border-radius: 1.5% ;
+       
     }
 
     .card-product-home {
@@ -185,11 +201,13 @@ header {
         margin: 15px 10px;
         width: 18rem;
         height: 26rem;
+        border-radius: 10% ;
         background-color: white;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
+        
     }
 
     .card-img-product-home{
@@ -227,6 +245,7 @@ header {
         height: auto;
         width: 98%;
         background-color: white;
+        
     }
     
     /* Boton Añadir producto */
@@ -235,7 +254,7 @@ header {
         display: flex;
         text-align: center;
         position: relative;
-        left: 25%;
+        left: 21%;
      }
 
 /* CSS html register */
@@ -337,14 +356,14 @@ li a i {
     padding: 0.3em 1em;
     text-align: center;
     text-decoration: none;
-    border: 2px solid green;
+    border: 2px solid rgb(214, 243, 52);
     font-size: 16px;
     display: inline-block;
     border-radius: 0.3em;
     transition: all 0.2s ease-in-out;
     position: relative;
     overflow: hidden;
-    background: green;
+    background: rgb(0, 0, 0);
     color: white;
 }
 
@@ -362,9 +381,10 @@ li a i {
 }
 
 .button-compra:hover {
-    background-color: #45e543;
-    border: #45e543;
-    border: 2px solid;
+    background-color: #509447;
+    border: #f1f3f1;
+    border: 2px solid #000000;
+    color: rgb(0, 0, 0);
 }
 
 .button-compra before {
@@ -509,9 +529,12 @@ li a i {
 
     .nav_header ul li {
         display: block;
+        
+        border-left: 20px solid  rgb(56, 56, 56);
+        border-right: 2px solid  rgb(255, 255, 255);
         float: left;
         position: relative;
-        background-color: rgb(180, 180, 178);
+        background-color: rgb(56, 56, 56);
     }
 }
 
