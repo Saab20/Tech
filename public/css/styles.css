@@ -62,7 +62,7 @@ header {
 /* CSS html header, Listas del navbar*/
 .nav_header{
     align-items: center;
-    background-color: rgb(180, 180, 178);
+    background-color: rgb(56, 56, 56);
     display: none;
 }
 
@@ -140,7 +140,7 @@ header {
 
 /*= Html header - Icono menu hamburguesa =*/
 .btn-toggle-navbar {
-    background-color: grey;
+    background-color: rgb(0, 0, 0);
     font-size: 1.5em;
     border: none;
     border-radius: 4px;
