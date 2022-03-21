@@ -31,7 +31,10 @@ const controlador=
         let usuarionuevo={
         id : idnuevo,
         name : req.body.name,
-        user : req.body.user,
+        apellido : req.body.apellido,
+        document_type:req.body.document_type,
+        dni : req.body.dni,
+        fecha: req.body.days,
         email : req.body.email,
         tel: req.body.tel,
         password: req.body.password,

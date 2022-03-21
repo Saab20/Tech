@@ -24,28 +24,28 @@
             <div class="form_container_subregister" action="/users/nuevousuario" method="POST">
                 <div class="form_group_register">
                     <label for="name" class="form_label">Nombre <sup>*</sup></label>
-                    <input type="text" id="name" name="name"class="form_input" placeholder=" ">
+                    <input type="text" required="required" id="name" name="name"class="form_input" placeholder=" ">
                 </div>
 
                 <div class="form_group_register">
                     <label for="name" class="form_label">Apellido <sup>*</sup></label>
-                    <input type="text" id="name" class="form_input" placeholder=" ">
+                    <input type="text" required="required" id="apellido" name="apellido" class="form_input" placeholder=" ">
                 </div>
 
                 <div class="form_group_register_id">
                     <div class="document_type_col">
-                        <div class="selector" id="uniform-document_type"><label>Tipo de documento</label><select id="selector_type_id" name="document_type" class="form_input">
-                                <option value="0" disabled="disabled" selected="selected">Seleccionar</option>
-                                <option value="1">Cédula de ciudadanía</option>
-                                <option value="2">Tarjeta de identidad</option>
-                                <option value="3">Cédula de extranjería</option>
-                                <option value="4">Pasaporte</option>
+                        <div class="selector"  id="uniform-document_type"><label>Tipo de documento</label><select id="selector_type_id" name="document_type" required="required" class="form_input">
+                                <option required="required" value="0" required="required" disabled="disabled" selected="selected">Seleccionar</option>
+                                <option value="cedula">Cédula de ciudadanía</option>
+                                <option value="tarjeta">Tarjeta de identidad</option>
+                                <option value="cedula Extranjeria">Cédula de extranjería</option>
+                                <option value="pasaporte">Pasaporte</option>
                                 </select>
                         </div>
                     </div>
                     <div class="dni_col col-xs-6 form-error">
                         <label for="dni">Nº de identificación <sup>*</sup></label>
-                        <input type="text" class="form_input" data-validate="isDniLite" name="dni" id="dni" value="" autocomplete="off">
+                        <input type="number" required="required" class="form_input" data-validate="isDniLite" name="dni" id="dni" value="" autocomplete="off">
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                     <label for="user" class="form_label">Fecha de Nacimiento <sup>*</sup></label>
                     <div class="form_fecha_nacimiento">
                         <div class="col-xs-4">
-                        <div class="selector" id="uniform-days" style="width: 86px;"><select id="days" name="days" class="is_required form_input">
+                        <div class="selector" required="required" id="uniform-days" style="width: 86px;"><select id="days" name="days" class="is_required form_input">
                           <option value="">-</option>
                                                                               <option value="1">1&nbsp;&nbsp;</option>
                                                                               <option value="2">2&nbsp;&nbsp;</option>
@@ -90,24 +90,24 @@
                       
                         </div>
                         <div class="col-xs-4">
-                        <div class="selector" id="uniform-months" style="width: 100px;"><select id="months" name="months" class="is_required form_input">
+                        <div class="selector" id="uniform-months" style="width: 100px;"><select id="months" name="days" class="is_required form_input">
                           <option value="">-</option>
-                                                                              <option value="1">Enero&nbsp;</option>
-                                                                              <option value="2">Febrero&nbsp;</option>
-                                                                              <option value="3">Marzo&nbsp;</option>
-                                                                              <option value="4">Abril&nbsp;</option>
-                                                                              <option value="5">Mayo&nbsp;</option>
-                                                                              <option value="6">Junio&nbsp;</option>
-                                                                              <option value="7">Julio&nbsp;</option>
-                                                                              <option value="8">Agosto&nbsp;</option>
-                                                                              <option value="9">Septiembre&nbsp;</option>
-                                                                              <option value="10">Octubre&nbsp;</option>
-                                                                              <option value="11">Noviembre&nbsp;</option>
-                                                                              <option value="12">Diciembre&nbsp;</option>
+                                                                              <option value="Enero">Enero&nbsp;</option>
+                                                                              <option value="Febrero">Febrero&nbsp;</option>
+                                                                              <option value="Marzo">Marzo&nbsp;</option>
+                                                                              <option value="Abril">Abril&nbsp;</option>
+                                                                              <option value="Mayo">Mayo&nbsp;</option>
+                                                                              <option value="Junio">Junio&nbsp;</option>
+                                                                              <option value="Julio">Julio&nbsp;</option>
+                                                                              <option value="Agosto">Agosto&nbsp;</option>
+                                                                              <option value="Septiembre">Septiembre&nbsp;</option>
+                                                                              <option value="Octubre">Octubre&nbsp;</option>
+                                                                              <option value="Noviembre">Noviembre&nbsp;</option>
+                                                                              <option value="Diciembre">Diciembre&nbsp;</option>
                                                                       </select></div>
                         </div>
                         <div class="col-xs-4">
-                        <div class="selector" id="uniform-years" style="width: 86px;"><select id="years" name="years" class="is_required form_input">
+                        <div class="selector" id="uniform-years" style="width: 86px;"><select id="years" name="days" class="is_required form_input">
                           <option value="">-</option>
                                                                               <option value="2022">2022&nbsp;&nbsp;</option>
                                                                               <option value="2021">2021&nbsp;&nbsp;</option>
@@ -239,7 +239,7 @@
 
                 <div class="form_group_register">
                     <label for="email" class="form_label">Email <sup>*</sup></label>
-                    <input type="email" id="email" name="email" class="form_input" placeholder=" ">
+                    <input type="email" required="required" id="email" name="email" class="form_input" placeholder=" ">
                     
                 </div>
 
@@ -250,12 +250,12 @@
 
                 <div class="form_group_register">
                     <label for="password" class="form_label">Contraseña <sup>*</sup></label>
-                    <input type="password" id="password" name="password" class="form_input" placeholder=" ">
+                    <input type="password" pattern="[a-zA-Z0-9]{4,16}" required="required" id="password" name="password" class="form_input" placeholder=" ">
                 </div>
 
                 <div class="form_group_register">
                     <label for="password" class="form_label">Repetir Contraseña <sup>*</sup></label>
-                    <input type="password" id="password" class="form_input" placeholder=" ">
+                    <input type="password" pattern="[a-zA-Z0-9]{4,16}" required="required" id="password" class="form_input" placeholder=" ">
                 </div>
 
                 <input class="form_register_input" type="submit" value="Enviar"></input>

@@ -1,17 +1,319 @@
 [
+ {},
  {
-  "id": 1,
-  "name": "sergio",
-  "user": "sab",
-  "email": "ser@gmail.com",
-  "tel": 123123,
-  "password": 1212
- },
- {
-  "id": 2,
+  "id": 0,
   "name": "",
   "email": "",
   "tel": "",
   "password": ""
+ },
+ {
+  "id": 1,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 2,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "fecha": [
+   "",
+   ""
+  ],
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 3,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "fecha": [
+   "16",
+   "2007"
+  ],
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 4,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "fecha": [
+   "17",
+   "3",
+   "2007"
+  ],
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 5,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "fecha": [
+   "16",
+   "Marzo",
+   "2007"
+  ],
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 6,
+  "name": "",
+  "apellido": "",
+  "dni": "",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "",
+  "tel": "",
+  "password": ""
+ },
+ {
+  "id": 7,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "0",
+  "fecha": [
+   "29",
+   "Abril",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "eerr",
+  "password": "ss"
+ },
+ {
+  "id": 8,
+  "name": "w",
+  "apellido": "e",
+  "dni": "12312",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "333"
+ },
+ {
+  "id": 9,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "dni": "3",
+  "fecha": [
+   "17",
+   "Marzo",
+   "2008"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "21323423",
+  "password": "sergio"
+ },
+ {
+  "id": 10,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "cedula",
+  "dni": "343",
+  "fecha": [
+   "17",
+   "Marzo",
+   "2007"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "1",
+  "password": "sergio"
+ },
+ {
+  "id": 11,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "222",
+  "fecha": [
+   "16",
+   "Marzo",
+   "2007"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "21323423",
+  "password": "sergio"
+ },
+ {
+  "id": 12,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "2222",
+  "fecha": [
+   "16",
+   "Marzo",
+   "2007"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "21323423",
+  "password": "sergio"
+ },
+ {
+  "id": 13,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "3333",
+  "fecha": [
+   "16",
+   "Marzo",
+   "2007"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "21323423",
+  "password": "sergio"
+ },
+ {
+  "id": 14,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "222",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "se",
+  "password": "sergio"
+ },
+ {
+  "id": 15,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "tarjeta",
+  "dni": "3333",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "se",
+  "password": "111"
+ },
+ {
+  "id": 16,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "document_type": "cedula",
+  "dni": "2",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "12345"
+ },
+ {
+  "id": 17,
+  "name": "tele",
+  "apellido": "Almeciga Avellaneda",
+  "dni": "222",
+  "fecha": [
+   "15",
+   "Marzo",
+   "2008"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "sergio"
+ },
+ {
+  "id": 18,
+  "name": "tele",
+  "apellido": "Almeciga Avellaneda",
+  "dni": "222",
+  "fecha": [
+   "15",
+   "Marzo",
+   "2008"
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "12"
+ },
+ {
+  "id": 19,
+  "name": "Sergio Almeciga",
+  "apellido": "Almeciga",
+  "dni": "33",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "1234"
+ },
+ {
+  "id": 20,
+  "name": "Sergio Almeciga",
+  "apellido": "sdsd",
+  "dni": "3",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "sergio"
+ },
+ {
+  "id": 21,
+  "name": "s",
+  "apellido": "s",
+  "dni": "3",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "sergio"
+ },
+ {
+  "id": 22,
+  "name": "Sergio Almeciga",
+  "apellido": "2",
+  "dni": "333",
+  "fecha": [
+   "",
+   "",
+   ""
+  ],
+  "email": "sergioalme24@hotmail.com",
+  "tel": "",
+  "password": "w"
  }
 ]
