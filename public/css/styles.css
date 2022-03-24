@@ -692,6 +692,7 @@ li a i {
     .form_group_register {
         position: relative;
         display: flex;
+        flex-direction: column;
     }
 
     .form_group_register_date{
@@ -746,6 +747,77 @@ li a i {
         left: 3px;
     }
 
+/*CSS html mi cuenta*/
+.mi_cuenta{
+    margin: 2px;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+        .contenedor_mi_cuenta{
+            margin: 5px;
+            padding: 10px;
+            width: 100%;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li.lista-iconos-mi-cuenta {
+            border: 1px solid rgb(126, 126, 126, 0.5);
+            background-color: white;
+            list-style: none;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contenedor_lista-iconos-mi-cuenta{
+            padding: 0;
+            text-align: center;
+            max-width: 450px;
+        }
+
+        #cont_titulos_mi_cuenta {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 1px 2px;
+            border: none;
+            background-color: white;
+        } */
+
+        .titulos_mi_cuenta{
+            padding: 2px;
+            margin: 2px 5px;
+        }
+        
+        a.subtitulos_mi_cuenta {
+            text-decoration: none;
+            color: grey;
+        }
+
+        a.volver_inicio_mi_cuenta{
+            text-decoration: none;
+            color: grey;
+            align-content: left;
+        }
+
+        .subtitulos_mi_cuenta{
+            padding: 2px;
+            margin: 2px 0px;
+        }
+
+        .container_img_mi_cuenta{
+            display: none;
+        }
+
 /*CSS html crear producto, margen*/
 .container.products-wrapper.mt-5.form {
     margin-top: 5rem !important;
@@ -771,6 +843,22 @@ li a i {
     .container_register {
         width: 50%;
     }
+    /* Media-Queries Html mi cuenta*/
+    .container_img_mi_cuenta{
+                width: 50%;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                }
+    
+            .container_img_mi_cuenta img {
+                max-width: 100%;
+                height: auto;
+                }
+                
+            .contenedor_mi_cuenta {
+                    width: 50%;
+                }
 }
 /* Oculta icono de hamburguesa-Html header */
 @media (min-width: 905px) {
