@@ -156,12 +156,14 @@ const controlador=
    
         for(let u of usuarios ){
               if (u.email == emailToLogin){
+                let idLogueado = u.id
                 let igualContraseña = bcryptjs.compareSync(passwordToLogin, u.password);
                          if(igualContraseña) {
-                             
-                          }
+                            res.redirect("/users/mi_cuenta/"+ idLogueado);
+                          } else {res.send('Datos Invalidos')}
+                          
                       }
-                      res.redirect("/users/mi_cuenta/");
+                      
                  }
     }
 
