@@ -1,6 +1,9 @@
 const usersRoutes= require("./src/Routes/usersRoutes")
 const productsRoutes= require("./src/Routes/productsRoutes")
 const mainRoutes= require("./src/Routes/mainRoutes")
+const session= require('express-session')
+
+
 
 const express = require("express")
 const app = express()
@@ -21,6 +24,10 @@ app.use(methodOverride('_method'));
 app.use("/" ,mainRoutes)
 app.use("/users" ,usersRoutes)
 app.use("/products", productsRoutes)
+
+app.use(session({secret: '123456', resave: true, saveUninitialized: true}))
+
+
 
 /*app.use("*", (req, res)=>{
     res.render("ruta erronea")
