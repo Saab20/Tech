@@ -2,7 +2,7 @@ const usersRoutes= require("./src/Routes/usersRoutes")
 const productsRoutes= require("./src/Routes/productsRoutes")
 const mainRoutes= require("./src/Routes/mainRoutes")
 const session= require('express-session')
-
+const mysql=require('mysql')
 
 
 const express = require("express")
