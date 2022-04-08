@@ -4,6 +4,7 @@ const path = require("path");
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const controlador=
 {
@@ -136,9 +137,20 @@ const controlador=
         },
 
     vitrina_productos:(req, res)=>{
-            res.render("products/vitrina_productos.ejs", {productos: products})  
+        db.productos.findAll()
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (productos of productos){
+                listaProductos.push(productos.nombre);
+            }
+
+            console.log("Ver: ", listaproductos);
+        });
+            console.log("llegue aca primero")
+            //res.render("products/vitrina_productos.ejs", {productos: products})  
         },
 };
-    
+
 
 module.exports=controlador
