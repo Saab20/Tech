@@ -9,6 +9,13 @@ function formas_de_pagoData(sequelize, Datatypes) {
 
     const formas_de_pago = sequelize.define( 'formas_de_pago',cols,config)
 
+    formas_de_pago.associate = function(modelos) {
+        formas_de_pago.hasMany(modelos.ventas_usuarios_productos, {
+            as: 'ventas_usuarios_productos',
+            foreignKey: 'id_forma_de_pagoFK'  
+        })
+    }
+
     return formas_de_pago;
 }
 

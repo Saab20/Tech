@@ -9,6 +9,14 @@ function departamentosData(sequelize, Datatypes) {
 
     const departamentos = sequelize.define( 'departamentos',cols,config)
 
+    departamentos.associate = function(modelos) {
+
+        departamentos.hasMany(modelos.categorias, {
+            as: 'categorias',
+            foreignKey: 'id_departamentoFK'  
+        });
+    }
+
     return departamentos;
 }
 

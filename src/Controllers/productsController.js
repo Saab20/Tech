@@ -137,19 +137,28 @@ const controlador=
         },
 
     vitrina_productos:(req, res)=>{
-        db.productos.findAll()
+        db.productos.findAll({include:[{association: 'categorias'}, {association: 'marcas'}, {association: 'especificaciones'}]})
         .then((productos) => {
             let listaProductos = [];
 
-            for (productos of productos){
-                listaProductos.push(productos.nombre);
-            }
+            for (producto of productos){
 
-            console.log("Ver: ", listaproductos);
+                let productoPrueba ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    categoria: producto.categorias.nombre,
+                    marca: producto.marcas.nombre
+                }
+
+                listaProductos.push(productoPrueba);
+            }
+            res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})  
+            console.log("Ver: ", listaProductos);
         });
             console.log("llegue aca primero")
-            //res.render("products/vitrina_productos.ejs", {productos: products})  
-        },
+            
+    },
 };
 
 

@@ -9,6 +9,13 @@ function marcasData(sequelize, Datatypes) {
 
     const marcas = sequelize.define( 'marcas',cols,config)
 
+    marcas.associate = function(modelos) {
+        marcas.hasMany(modelos.productos, {
+            as: 'productos',
+            foreignKey: 'id_marcaFK'  
+        })
+    }
+
     return marcas;
 }
 

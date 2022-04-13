@@ -11,6 +11,13 @@ function facturasData(sequelize, Datatypes) {
 
     const facturas = sequelize.define( 'facturas',cols,config)
 
+    facturas.associate = function(modelos) {
+        facturas.hasMany(modelos.ventas_usuarios_productos, {
+            as: 'ventas_usuarios_productos',
+            foreignKey: 'id_facturaFK'  
+        })
+    }
+
     return facturas;
 }
 

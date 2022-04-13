@@ -14,6 +14,13 @@ function usuariosData(sequelize, Datatypes) {
 
     const usuarios = sequelize.define( 'usuarios',cols,config)
 
+    usuarios.associate = function(modelos) {
+        usuarios.hasMany(modelos.ventas_usuarios_productos, {
+            as: 'ventas_usuarios_productos',
+            foreignKey: 'id_usuarioFK'  
+        })
+    }
+
     return usuarios;
 }
 
