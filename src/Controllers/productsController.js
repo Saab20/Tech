@@ -168,10 +168,12 @@ const controlador=
 					listaEspecificaciones.push(especificaciones.tipo + ': ' + especificaciones.valor);
 				}
 
+                let rutaImg = "/img/"+ producto.imagen
                 let productoPrueba ={
                     id: producto.id,
                     nombre: producto.nombre,
                     precio: producto.precio,
+                    imagen: rutaImg,
                     descuento: producto.descuento,
                     marca: producto.marcas.nombre,
                     especificaciones: listaEspecificaciones
