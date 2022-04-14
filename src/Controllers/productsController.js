@@ -70,47 +70,65 @@ const controlador=
         res.redirect("/")
     },
 
+    // Redirección al formulario de crear un producto
     crear_producto:(req, res)=>{
         res.render("products/crear_producto.ejs")
         
     },
 
-    tienda:(req, res)=>{
+    // Acción de crear un producto
+    create:(req, res)=>{
 
-        idNuevo=0;
+        let nombreImagen = req.file.filename;
 
-		for (let s of products){
-			if (idNuevo<s.id){
-				idNuevo=s.id;
-			}
-		}
+        db.productos.create({
 
-		idNuevo++;
+                nombre : req.body.name,
+                precio : req.body.price,
+                descuento: req.body.discount,
+                inventario : req.body.inventory,
+                id_categoriaFK: req.body.category,
+                id_marcaFK: req.body.mark,
+                descripcion : req.body.description,
+                imagen: nombreImagen,
 
-		let nombreImagen = req.file.filename;
+        });
+
+        // idNuevo=0;
+
+		// for (let s of products){
+		// 	if (idNuevo<s.id){
+		// 		idNuevo=s.id;
+		// 	}
+		// }
+
+		// idNuevo++;
+
+		// let nombreImagen = req.file.filename;
         
-        let productos=products
-        let idnuevo=products[productos.length-1].id+1
+        // let productos=products
+        // let idnuevo=products[productos.length-1].id+1
 
-        let productonuevo={
-        id : idnuevo,
-        name : req.body.name,
-        price : req.body.price,
-        price2 : req.body.price2,
-        discount: req.body.discount,
-        category: req.body.category,
-        description : req.body.description,
-        image: nombreImagen
+        // let productonuevo={
+        // id : idnuevo,
+        // name : req.body.name,
+        // price : req.body.price,
+        // price2 : req.body.price2,
+        // discount: req.body.discount,
+        // category: req.body.category,
+        // description : req.body.description,
+        // image: nombreImagen
 
-        }
-        productos.push(productonuevo)
-        fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
-        
+        // }
+        // productos.push(productonuevo)
+        // fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
+
         res.redirect("/")
-       console.log(productonuevo)
+        console.log(productoNuevo)
 
     },
 
+    //Vista de carro de compra
     carro_de_compras:(req, res)=>{
         res.render("products/carro_de_compras.ejs")
     },
@@ -136,6 +154,7 @@ const controlador=
             res.redirect("/");
         },
 
+        // Vista de todos los productos 
     vitrina_productos:(req, res)=>{
         db.productos.findAll({include:[{association: 'categorias'}, {association: 'marcas'}, {association: 'especificaciones'}]})
         .then((productos) => {
@@ -143,12 +162,19 @@ const controlador=
 
             for (producto of productos){
 
+                let listaEspecificaciones=[];
+
+				for (especificaciones of producto.especificaciones){
+					listaEspecificaciones.push(especificaciones.tipo + ': ' + especificaciones.valor);
+				}
+
                 let productoPrueba ={
                     id: producto.id,
                     nombre: producto.nombre,
                     precio: producto.precio,
-                    categoria: producto.categorias.nombre,
-                    marca: producto.marcas.nombre
+                    descuento: producto.descuento,
+                    marca: producto.marcas.nombre,
+                    especificaciones: listaEspecificaciones
                 }
 
                 listaProductos.push(productoPrueba);

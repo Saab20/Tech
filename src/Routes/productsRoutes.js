@@ -20,18 +20,19 @@ const configuracionImagen = multer.diskStorage({
 
 const uploadFile = multer({ storage: configuracionImagen });
 
+// /*** ENRUTADOR PARA DETALLE DE UN PRODUCTO***/ 
 router.get("/detalle_producto/:id",productsController.detalle_producto)
 
-
+// /*** ENRUTADOR PARA CARRO DE COMPRA***/
 router.get("/carro_de_compras",productsController.carro_de_compras)
 
+// /*** ENRUTADOR PARA CREAR UN PRODUCTO***/
 router.get("/crear_producto",productsController.crear_producto)
-router.post("/tienda",uploadFile.single("imageproduct"), productsController.tienda)
+router.post("/tienda",uploadFile.single("imageproduct"), productsController.create)
 
+// /*** ENRUTADOR PARA EDITAR UN PRODUCTO***/
 router.get("/editar_producto/:id",productsController.editar_producto)
 router.put("/editar_producto/:id",productsController.update)
-
-
 
 // /*** ENRUTADOR PARA BORRAR UN PRODUCTO***/ 
 router.delete('/delete/:id', productsController.destroy);
