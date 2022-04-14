@@ -90,7 +90,7 @@ const controlador=
                 id_categoriaFK: req.body.category,
                 id_marcaFK: req.body.mark,
                 descripcion : req.body.description,
-                imagen: nombreImagen,
+                imagen: __dirname+''
 
         });
 
@@ -174,6 +174,7 @@ const controlador=
                     precio: producto.precio,
                     descuento: producto.descuento,
                     marca: producto.marcas.nombre,
+                    imagen: __dirname+"../../public/img/"+ producto.imagen,
                     especificaciones: listaEspecificaciones
                 }
 
