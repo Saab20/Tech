@@ -23,7 +23,7 @@
                         <div  style="width: 30rem;">
                                 
                             <div class="card-body">
-                                <img src="/img/<%=productos.image%>" class="card-img-top" alt="Detalle de Producto">   
+                                <img src="/img/<%=producto.imagen%>" class="card-img-top" alt="Detalle de Producto">   
                             </div>
                         </div>
                     </div>
@@ -32,18 +32,18 @@
    
                             <div class="card-body">
                                         
-                                <h4><%=productos.name %> </h4>
+                                <h4><%=producto.nombre %> </h4>
                                 <div class="descripcion">
                                 
-                                    <p class="card-text"><%=productos.description %></p>
+                                    <p class="card-text"><%=producto.descripcion %></p>
                                    
                                 </div>
                                             <br>
                                 <div class="box-price">
-                                    <span class="price2"><b>Descuento:<%=productos.discount %> % </b></span>
+                                    <span class="price2"><b>Descuento:<%=producto.descuento %> % </b></span>
                                         <div>
-                                            <span class="price1"><strike>$<%=productos.price %></strike></span>
-                                            <span class="compra"> $<%=productos.price - (productos.discount * productos.price / 100) %></i></span>
+                                            <span class="price1"><strike>$<%=producto.precio %></strike></span>
+                                            <span class="compra"> $<%=producto.precio - (producto.descuento * producto.precio / 100) %></i></span>
                                         </div>
                                             
                                 </div>
@@ -53,9 +53,9 @@
 
                                     <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
 
-                                    <a href="/products/editar_producto/<%=productos.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
+                                    <a href="/products/editar_producto/<%=producto.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
 
-                                    <form action="/products/delete/<%=productos.id%>?_method=DELETE" method="POST" style="display: inline-flex">
+                                    <form action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
                                         <button type="submit" class="btn btn-secondary">Eliminar Producto</button>
                                     </form>
 

@@ -9,66 +9,127 @@ const db = require('../database/models');
 const controlador=
 {
 
-    home:(req, res)=>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render("home", {productos: products})
-    },
-
     detalle_producto:(req, res)=>{
-        let idProducto= req.params.id;
-        let productoEncontrado=null
+        
+        
+        //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        db.productos.findAll()
+        .then((productos) => {
+            let idProducto= req.params.id;
+            let productoEncontrado=null
+            let listaProductos = [];
+            for (producto of productos){
+                
+                if(producto.id==idProducto){
 
-        for(let p of products ){
-            if (p.id== idProducto){
-
-                productoEncontrado=p;
-                break;
-
+                    let rutaImg = "/img/"+ producto.imagen
+                    let productohome ={
+                        id: producto.id,
+                        nombre: producto.nombre,
+                        precio: producto.precio,
+                        imagen: rutaImg,
+                        descuento: producto.descuento,  
+                        
+                    }
+                    listaProductos.push(productohome);
+                    productoEncontrado=producto;
+                    break;
+                    
+                }
+                
             }
-        }
-        res.render("products/detalle_producto.ejs",{productos: productoEncontrado})
+            
+            console.log(listaProductos)
+            res.render("products/detalle_producto.ejs",{producto: productoEncontrado})
+        })
+
     },
+
+
+   
+
+    // detalle_producto:(req, res)=>{
+    //     let idProducto= req.params.nombre;
+    //     let productoEncontrado=null
+
+    //     for(let p of products ){
+    //         if (p.id== idProducto){
+
+    //             productoEncontrado=p;
+    //             break;
+
+    //         }
+    //     }
+    //     res.render("products/detalle_producto.ejs",{producto: productoEncontrado})
+    // },
 
     editar_producto:(req, res)=>{
         
+        
+        db.productos.findAll({include:[{association: 'categorias'}, {association: 'marcas'}, {association: 'especificaciones'}]})
+        .then((productos) => {
         let idProducto= req.params.id;
-        let productoEncontrado=null
+        let productoeditado=null
+        let listaProductos = [];
+        for(let producto of productos ){
+            if (producto.id== idProducto){
+                let rutaImg = "/img/"+ producto.imagen
 
-        for(let p of products ){
-            if (p.id== idProducto){
-
-                productoEncontrado=p;
+                let productoeditado ={
+                    nombre: producto.nombre,
+                    descuento: producto.descuento,
+                    marca: producto.marcas.nombre,
+                    imagen: rutaImg,
+                    
+                    
+                }
+                //listaProductos.push(productoeditado);
+                productoEncontrado=producto;
                 break;
 
             }
         }
-        res.render("products/editar_producto.ejs",{productos: productoEncontrado})
-        
+
+        console.log(productoEncontrado)
+        res.render("products/editar_producto.ejs",{producto: productoEncontrado})
+    })  
     },
 
     update:(req, res)=>{
     
         let productoseditado=req.body
         let idbuscado= req.params.id
-        let productos=products
+    
+            db.productos.update(
+                {
 
-        for(let p of productos ){
-            if (p.id== idbuscado){
-                p.name=productoseditado.name
-                p.price=productoseditado.price
-                p.price2=productoseditado.price2
-                p.discount=productoseditado.discount
-                p.category=productoseditado.category
-                p.description=productoseditado.description
-                break;
+                nombre:productoseditado.name,
+                precio:productoseditado.price,
+                price2:productoseditado.price2,
+                descuento:productoseditado.discount,
+                
+                descripcion:productoseditado.descripcion,
 
-            }
-        }
+
+                },
+                
+                {
+                    where: {id: idbuscado}
+
+                }
+
+            ).then(()=>{
+
+                res.redirect("/")
+
+            })
+                
+           
+          
+    
         
-        fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
-
-        res.redirect("/")
     },
+   
 
     // Redirección al formulario de crear un producto
     crear_producto:(req, res)=>{
@@ -90,7 +151,7 @@ const controlador=
                 id_categoriaFK: req.body.category,
                 id_marcaFK: req.body.mark,
                 descripcion : req.body.description,
-                imagen: __dirname+''
+                imagen: nombreImagen
 
         });
 
@@ -133,26 +194,50 @@ const controlador=
         res.render("products/carro_de_compras.ejs")
     },
 
-        // Delete - Borrar un producto
-    destroy : (req, res) => {
-        let idProductoSeleccionado = req.params.id;
-        let productoEncontrado=null;
+    destroy:(req, res)=>{
     
-        for (let p of products){
-            if (p.id==idProductoSeleccionado){
-                productoEncontrado=p;
-                break;
+        let productoseditado=req.body
+        let idbuscado= req.params.id
+    
+            db.productos.destroy(
+                
+                {
+                    where: {id: idbuscado}
                 }
-            }
-    
-            let productos2 = products.filter(function(e){
-                return e.id!=productoEncontrado.id;
+
+            ).then(()=>{
+
+                res.redirect("/")
+
             })
-            fs.unlinkSync(path.join(__dirname, '../../public/img', productoEncontrado.image));
-            fs.writeFileSync(productsFilePath, JSON.stringify(productos2,null,' '));
+        
+    },
+
+
+
+
+
+
+    //     // Delete - Borrar un producto
+    // destroy : (req, res) => {
+    //     let idProductoSeleccionado = req.params.id;
+    //     let productoEncontrado=null;
     
-            res.redirect("/");
-        },
+    //     for (let p of products){
+    //         if (p.id==idProductoSeleccionado){
+    //             productoEncontrado=p;
+    //             break;
+    //             }
+    //         }
+    
+    //         let productos2 = products.filter(function(e){
+    //             return e.id!=productoEncontrado.id;
+    //         })
+    //         fs.unlinkSync(path.join(__dirname, '../../public/img', productoEncontrado.image));
+    //         fs.writeFileSync(productsFilePath, JSON.stringify(productos2,null,' '));
+    
+    //         res.redirect("/");
+    //     },
 
         // Vista de todos los productos 
     vitrina_productos:(req, res)=>{
@@ -168,13 +253,15 @@ const controlador=
 					listaEspecificaciones.push(especificaciones.tipo + ': ' + especificaciones.valor);
 				}
 
+                let rutaImg = "/img/"+ producto.imagen
                 let productoPrueba ={
                     id: producto.id,
                     nombre: producto.nombre,
                     precio: producto.precio,
+                    imagen: rutaImg,
                     descuento: producto.descuento,
                     marca: producto.marcas.nombre,
-                    imagen: __dirname+"../../public/img/"+ producto.imagen,
+                    imagen: rutaImg,
                     especificaciones: listaEspecificaciones
                 }
 
