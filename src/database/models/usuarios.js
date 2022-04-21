@@ -4,10 +4,16 @@ function usuariosData(sequelize, Datatypes) {
         id: {type: Datatypes.INTEGER, primaryKey:true, autoIncrement: true},
         nombre: {type: Datatypes.STRING(50)},
         apellido: {type: Datatypes.STRING(50)},
-        email: {type: Datatypes.STRING(50)},
-        direccion: {type: Datatypes.STRING(50)},
+        tipo_documento: {type: Datatypes.STRING(50)},
         dni: {type: Datatypes.STRING(50)},
-        telefono: {type: Datatypes.INTEGER}
+        dia: {type: Datatypes.INTEGER},
+        mes: {type: Datatypes.STRING(50)},
+        year: {type: Datatypes.INTEGER},
+        email: {type: Datatypes.STRING(50)},
+        telefono: {type: Datatypes.INTEGER},
+        direccion: {type: Datatypes.STRING(50)},
+        contrasena: {type: Datatypes.STRING(50)},
+        img_perfil: {type: Datatypes.STRING(50)}
     };
 
     config = {camelCase:false, timestamps: false};

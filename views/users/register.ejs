@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include("../partials/head",{title: 'registrarse'}) %>
+    <%- include("../partials/head",{title: 'registro'}) %>
 
 </head>
 
@@ -23,8 +23,8 @@
 
             <div class="form_container_subregister" action="/users/nuevousuario" method="POST">
                 <div class="form_group_register">
-                    <label for="name" class="form_label">Nombre <sup>*</sup></label>
-                    <input type="text" required="required" id="name" name="nombres"class="form_input" placeholder=" "
+                    <label for="name" class="form_label">Nombre(s): <sup>*</sup></label>
+                    <input type="text" id="name" name="nombres" class="form_input" placeholder=" "
                     value="<%=locals.oldData ? oldData.nombres : ''%>">
                     <% if (locals.errors && errors.nombres) { %>
                         <div class="text-danger">
@@ -34,8 +34,8 @@
                 </div>
 
                 <div class="form_group_register">
-                    <label for="name" class="form_label">Apellido <sup>*</sup></label>
-                    <input type="text" required="required" id="apellido" name="apellidos" class="form_input" placeholder=" "
+                    <label for="name" class="form_label">Apellido(s): <sup>*</sup></label>
+                    <input type="text" id="apellido" name="apellidos" class="form_input" placeholder=" "
                     value="<%= locals.oldData ? oldData.apellidos: '' %>">
                     <% if (locals.errors && errors.apellidos) { %>
                         <div class="text-danger">
@@ -46,11 +46,12 @@
 
                 <div class="form_group_register_id">
                     <div class="document_type_col">
-                        <div class="selector"  id="uniform-document_type"><label for="tipo_documento">Tipo de documento</label>
+                        <div class="selector"  id="uniform-document_type"><label for="tipo_documento">Tipo de documento: </label>
                             
-                            <select id="selector_type_id" name="tipo_documento" required="required" class="form_input">
-                                <option value="select" required="required" disabled="disabled" selected="selected">Seleccionar</option>
+                            <select id="selector_type_id" name="tipo_documento" class="form_input">
+                                <option value="select" disabled="disabled" selected="selected">Seleccionar</option>
                                 <option value='cedula_ciudadania' <%= (locals.oldData && oldData.tipo_documento) === 'cedula_ciudadania' ? 'selected' : '' ; %> >Cédula de ciudadanía</option>
+                                <option value='DNI' <%= (locals.oldData && oldData.tipo_documento) === 'DNI' ? 'selected' : '' ; %> >DNI</option>
                                 <option value="tarjeta_identidad" <%= (locals.oldData && oldData.tipo_documento) === 'tarjeta_identidad' ? 'selected' : '' ; %>>Tarjeta de identidad</option>
                                 <option value="cedula_extranjeria" <%= (locals.oldData && oldData.tipo_documento) === 'cedula_extranjeria' ? 'selected' : '' ; %>>Cédula de extranjería</option>
                                 <option value="pasaporte" <%= (locals.oldData && oldData.tipo_documento) === 'pasaporte' ? 'selected' : '' ; %>>Pasaporte</option>
@@ -59,8 +60,8 @@
                         </div>
                     </div>
                     <div class="dni_col col-xs-6 form-error">
-                        <label for="dni">Nº de identificación <sup>*</sup></label>
-                        <input type="number" required="required" class="form_input" data-validate="isDniLite" name="dni" id="dni" autocomplete="off"
+                        <label for="dni">Nº de identificación: <sup>*</sup></label>
+                        <input type="text" class="form_input" data-validate="isDniLite" name="dni" id="dni" autocomplete="off"
                         value="<%= locals.oldData ? oldData.dni: '' %>" autocomplete="off">
                         <% if (locals.errors && errors.dni) { %>
                             <div class="text-danger">
@@ -71,12 +72,12 @@
                 </div>
 
                 <div class="form_group_register_date">
-                    <label for="user" name="birth_date" class="form_label">Fecha de Nacimiento <sup>*</sup></label>
+                    <label for="user" name="birth_date" class="form_label">Fecha de Nacimiento: <sup>*</sup></label>
                     <div class="form_fecha_nacimiento">
                         <div class="col-xs-4">
-                        <div class="selector" required="required" id="uniform-days" style="width: 86px;">
+                        <div class="selector" id="uniform-days" style="width: 86px;">
                             <select id="days" name="days" class="is_required form_input">
-                                    <option value="">-</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="1" <%= (locals.oldData && oldData.days) === '1' ? 'selected' : '' ; %>>1&nbsp;&nbsp;</option>
                                     <option value="2" <%= (locals.oldData && oldData.days) === '2' ? 'selected' : '' ; %>>2&nbsp;&nbsp;</option>
                                     <option value="3" <%= (locals.oldData && oldData.days) === '3' ? 'selected' : '' ; %>>3&nbsp;&nbsp;</option>
@@ -114,7 +115,7 @@
                         <div class="col-xs-4">
                         <div class="selector" id="uniform-months" style="width: 100px;">
                             <select id="months" name="months" class="is_required form_input">
-                                    <option value="">-</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="Enero" <%= (locals.oldData && oldData.months) === 'Enero' ? 'selected' : '' ; %>>Enero&nbsp;</option>
                                     <option value="Febrero" <%= (locals.oldData && oldData.months) === 'Febrero' ? 'selected' : '' ; %>>Febrero&nbsp;</option>
                                     <option value="Marzo" <%= (locals.oldData && oldData.months) === 'Marzo' ? 'selected' : '' ; %>>Marzo&nbsp;</option>
@@ -132,7 +133,7 @@
                         <div class="col-xs-4">
                         <div class="selector" id="uniform-years" style="width: 86px;">
                             <select id="years" name="years" class="is_required form_input">
-                                    <option value="">-</option>
+                                    <option value="">Seleccionar</option>
                                     <option value="2022" <%= (locals.oldData && oldData.years) === '2022' ? 'selected' : '' ; %>>2022&nbsp;&nbsp;</option>
                                     <option value="2021" <%= (locals.oldData && oldData.years) === '2021' ? 'selected' : '' ; %>>2021&nbsp;&nbsp;</option>
                                     <option value="2020" <%= (locals.oldData && oldData.years) === '2020' ? 'selected' : '' ; %>>2020&nbsp;&nbsp;</option>
@@ -224,8 +225,8 @@
                 </div>
 
                 <div class="form_group_register">
-                    <label for="email" class="form_label">Email <sup>*</sup></label>
-                    <input type="email" required="required" id="email" name="email" class="form_input" placeholder=" "
+                    <label for="email" class="form_label">Email: <sup>*</sup></label>
+                    <input type="email"  id="email" name="email" class="form_input" placeholder=" "
                     value="<%= locals.oldData ? oldData.email: '' %>">
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
@@ -235,12 +236,23 @@
                 </div>
 
                 <div class="form_group_register">
-                    <label for="tel" class="form_label">Celular</label>
-                    <input type="tel" id="tel" name="tel" class="form_input" placeholder=" "
+                    <label for="tel" class="form_label">Celular: </label>
+                    <input type="tel" id="tel" name="tel" class="form_input" placeholder="Ej: 321 321 3454 "
                     value="<%= locals.oldData ? oldData.tel: '' %>">
                     <% if (locals.errors && errors.tel) { %>
                         <div class="text-danger">
                         <%= errors.tel.msg %>
+                        </div>
+                     <% } %>
+                </div>
+
+                <div class="form_group_register">
+                    <label for="dir" class="form_label">Dirección: <sup>*</sup></label>
+                    <input type="text" id="dir" name="dir" class="form_input" placeholder="Ej: Crr 8 #14- 5 Bogotá "
+                    value="<%= locals.oldData ? oldData.dir: '' %>">
+                    <% if (locals.errors && errors.dir) { %>
+                        <div class="text-danger">
+                        <%= errors.dir.msg %>
                         </div>
                      <% } %>
                 </div>
@@ -258,8 +270,8 @@
                 </div>
 
                 <div class="form_group_register">
-                    <label for="password" class="form_label">Contraseña <sup>*</sup></label>
-                    <input type="password" required="required" id="password" name="password" class="form_input" placeholder=" Introduca entre 4 y 16 caracteres">
+                    <label for="password" class="form_label">Contraseña: <sup>*</sup></label>
+                    <input type="password"  id="password" name="password" class="form_input" placeholder=" Introduca entre 4 y 16 caracteres">
                     <% if (locals.errors && errors.password) { %>
                         <div class="text-danger">
                         <%= errors.password.msg %>
@@ -269,8 +281,8 @@
                 
 
                 <div class="form_group_register">
-                    <label for="password" class="form_label">Repetir Contraseña <sup>*</sup></label>
-                    <input type="password" required="required" id="password2" name="password2" class="form_input" placeholder=" ">
+                    <label for="password" class="form_label">Repetir Contraseña: <sup>*</sup></label>
+                    <input type="password"  id="password2" name="password2" class="form_input" placeholder=" ">
                     <% if (locals.errors && errors.password2) { %>
                         <div class="text-danger">
                         <%= errors.password2.msg %>
@@ -278,7 +290,7 @@
                      <% } %>
                 </div>
 
-                <input class="form_register_input" type="submit" value="Enviar"></input>
+                <input class="form_register_input" type="submit" value="Registrarse"></input>
 
             </div>
 
