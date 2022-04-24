@@ -56,7 +56,7 @@ const controlador=
                     dni: req.body.dni,
                     days: req.body.days,
                     months: req.body.months,
-                    year: req.body.years,
+                    years: req.body.years,
                     email : req.body.email,
                     tel: req.body.tel,
                     dir: req.body.dir,
@@ -136,20 +136,31 @@ const controlador=
         
         let emailToLogin = req.body.email;
         let passwordToLogin = req.body.password;
-        
+        console.log("Este es el email: " + emailToLogin + " Esta es la contraseña: " + passwordToLogin)
 
-        db.ususarios.findOne({
-            where: {
-                email: emailToLogin,
-                contrasena: igualContraseña
+        db.usuarios.findAll({
+                 where: {
+                     email: emailToLogin,
+                 }
+             }).then((usuarios) => {
+            let usuarioLogin = [];
+
+            for (usuario of usuarios){
+                let contrasenaUsuario = usuario.contrasena;
+               // let contrasenaEncriptada2 = bcryptjs.hashSync(passwordToLogin, 8);
+
+                let igualContrasena= bcryptjs.compareSync(passwordToLogin, contrasenaUsuario);
+
+                let usuarioPrueba ={
+                    id: usuario.id,
+                    nombre: usuario.nombre,
+                }
+                console.log('Este es el resultado de igual contraseña: '+ igualContrasena)
+                usuarioLogin.push(usuarioPrueba);
             }
-        }).then((usuario)=>{
-            console.log(usuario);
-            let igualContraseña = bcryptjs.compareSync(passwordToLogin, usuario.contrasena);
-             if(igualContraseña) {
-                 res.redirect("/users/mi_cuenta/"+ usuario.id);
-                     } else {res.send('Datos Invalidos')}  
-        })
+            res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
+            console.log("Ver: ", usuarioLogin);    
+        });
    
     //     for(let u of usuarios ){
     //           if (u.email == emailToLogin){

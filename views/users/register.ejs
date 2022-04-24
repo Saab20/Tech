@@ -55,7 +55,7 @@
                                 <option value="tarjeta_identidad" <%= (locals.oldData && oldData.tipo_documento) === 'tarjeta_identidad' ? 'selected' : '' ; %>>Tarjeta de identidad</option>
                                 <option value="cedula_extranjeria" <%= (locals.oldData && oldData.tipo_documento) === 'cedula_extranjeria' ? 'selected' : '' ; %>>Cédula de extranjería</option>
                                 <option value="pasaporte" <%= (locals.oldData && oldData.tipo_documento) === 'pasaporte' ? 'selected' : '' ; %>>Pasaporte</option>
-                                <option value="nit" <%= (locals.oldData && oldData.tipo_documento) === 'nit' ? 'selected' : '' ; %>>Nit</option>
+                                <option value="nit" <%= (locals.oldData && oldData.tipo_documento) === 'nit' ? 'selected' : '' ; %>>NIT</option>
                             </select>
                         </div>
                     </div>
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="form_group_register_date">
-                    <label for="user" name="birth_date" class="form_label">Fecha de Nacimiento: <sup>*</sup></label>
+                    <label for="user" name="birth_date" class="form_label">Fecha de Nacimiento:</label>
                     <div class="form_fecha_nacimiento">
                         <div class="col-xs-4">
                         <div class="selector" id="uniform-days" style="width: 86px;">
@@ -115,7 +115,7 @@
                         <div class="col-xs-4">
                         <div class="selector" id="uniform-months" style="width: 100px;">
                             <select id="months" name="months" class="is_required form_input">
-                                    <option value="">Seleccionar</option>
+                                    <option value="0">Seleccionar</option>
                                     <option value="Enero" <%= (locals.oldData && oldData.months) === 'Enero' ? 'selected' : '' ; %>>Enero&nbsp;</option>
                                     <option value="Febrero" <%= (locals.oldData && oldData.months) === 'Febrero' ? 'selected' : '' ; %>>Febrero&nbsp;</option>
                                     <option value="Marzo" <%= (locals.oldData && oldData.months) === 'Marzo' ? 'selected' : '' ; %>>Marzo&nbsp;</option>
