@@ -3,84 +3,78 @@
     <head>
         <%- include("../partials/head", {title: 'Todos los productos'}) %>  
     </head>
-    <body>
+    <body class="body_detalle_producto">
  <!--MENU-->
     <header>
              <%- include("../partials/header") %>
     </header>
+
+    <br>
+    <br>
+    <br>
 <!--MENU-->
         
-    <main class="main">
-        <div class="container-fluid">
+    <main class="main_detalle_producto">
 
+        <div class="container_fluid_detalle_producto">
 
-            <div class="container">
-                <div>
-                            
-                </div>
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div  style="width: 30rem;">
-                                
-                            <div class="card-body">
-                                <img src="/img/<%=producto.imagen%>" class="card-img-top" alt="Detalle de Producto">   
-                            </div>
+            <div class="container_detalle_producto">
+                 
+                    <div class="div_img_product">
+                        <img src="/img/<%=producto.imagen%>" style="width: 50%;"class="card-img-detalle-product" alt="Detalle de Producto">   
+                    </div>
+                          
+                    <div class="div_caracteristicas_producto">
+                        <div class="col"> 
+                            <h4 for="text">Características destacadas</h4>
+                            <p class="card-text">Marca: <%=producto.marcas.nombre%></p>
+                            <p class="card-text">Categoria: <%=producto.categorias.nombre%></p>
+                            <p class="card-text"> Especificaciones: <%=producto.especificaciones.valor%> </p>
+                        </div>
+                        <div class="col"> 
+                            <h4 for="text">Resumen del producto</h4>
+                            <p class="card-text"><%=producto.descripcion %></p>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div style="width: 50rem;">
+            </div>
+
+            <div class="container_datos_producto">
    
-                            <div class="card-body">
+                    <div class="card_body_product">
                                         
-                                <h4><%=producto.nombre %> </h4>
-                                <div class="descripcion">
-                                
-                                    <p class="card-text"><%=producto.descripcion %></p>
-                                   
-                                </div>
-                                            <br>
-                                <div class="box-price">
-                                    <span class="price2"><b>Descuento:<%=producto.descuento %> % </b></span>
-                                        <div>
-                                            <span class="price1"><strike>$<%=producto.precio %></strike></span>
-                                            <span class="compra"> $<%=producto.precio - (producto.descuento * producto.precio / 100) %></i></span>
-                                        </div>
-                                            
-                                </div>
-                                            <br>
-                                            <br>
-                                <div class="d-grid gap-2 d-md-block">
+                        <h3><%=producto.nombre %> </h3>
+                            
+                        <a class="card-text">Más información</a>   
+                                    
+                            <div class="box-price">
+                                    <span class="price2" style="font-size:26px;"><b>Descuento:<%=producto.descuento %> % </b></span>
+                                    <div>
+                                        <span class="price1" style="font-size:20px;"><strike>$<%=producto.precio %> </strike> Antes </span>
+                                        <br>
+                                        <span class="compra" style="font-size:28px; color: brown;"> <b> $ <%=producto.precio - (producto.descuento * producto.precio / 100) %> </i> Hoy </b></span>
+                                    </div>            
+                            </div>
+                                        <br>
+                            <div class="d-grid gap-2 botones_detalle_producto">
 
-                                    <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
+                                    <button type="button" class="btn btn-secondary btn_detalle_producto">Agregar al Carrito</button>
 
-                                    <a href="/products/editar_producto/<%=producto.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
+                                    <a href="/products/editar_producto/<%=producto.id %>"><button type="button" class="btn btn-secondary btn_detalle_producto">Editar producto</button></a>  
 
                                     <form action="/products/delete/<%=producto.id%>?_method=DELETE" method="POST" style="display: inline-flex">
-                                        <button type="submit" class="btn btn-secondary">Eliminar Producto</button>
+                                        <button type="submit" class="btn btn-secondary btn_detalle_producto">Eliminar Producto</button>
                                     </form>
 
-                                </div>
-                                            
                             </div>
                           
-                        </div>
                     </div>
-
-                </div>
             </div>
-                    
         </div>
-
-                
-
+                    
+    </main>
         <!--FOOTER-->
         <%- include("../partials/footer") %> 
             <!--FOOTER-->
-    
 
-
-
-
-    
     </body>
 </html>
