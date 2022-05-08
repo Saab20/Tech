@@ -5,6 +5,7 @@ const express =require("express")
 const router= express.Router()
 const path = require("path");
 const multer= require('multer')
+const validatorProducts = require('../../middlewares/validateProductsMiddlewares')
 
 // configuracion multer
 
@@ -28,7 +29,7 @@ router.get("/carro_de_compras",productsController.carro_de_compras)
 
 // /*** ENRUTADOR PARA CREAR UN PRODUCTO***/
 router.get("/crear_producto",productsController.crear_producto)
-router.post("/tienda",uploadFile.single("imageproduct"), productsController.create)
+router.post("/tienda",uploadFile.single("imageproduct"), validatorProducts, productsController.create)
 
 // /*** ENRUTADOR PARA EDITAR UN PRODUCTO***/
 router.get("/editar_producto/:id",productsController.editar_producto)

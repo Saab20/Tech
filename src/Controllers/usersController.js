@@ -147,7 +147,7 @@ const controlador=
 
             for (usuario of usuarios){
                 let contrasenaUsuario = usuario.contrasena;
-               // let contrasenaEncriptada2 = bcryptjs.hashSync(passwordToLogin, 8);
+               // let contrasenaEncriptada = bcryptjs.hashSync(passwordToLogin, 8);
 
                 let igualContrasena= bcryptjs.compareSync(passwordToLogin, contrasenaUsuario);
 

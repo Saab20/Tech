@@ -436,7 +436,7 @@ header {
         margin: 15px 10px;
         width: 18rem;
         height: 26rem;
-        border-radius: 10% ;
+        border-radius: 8%;
         background-color: white;
         display: flex;
         flex-flow: column wrap;
@@ -489,33 +489,66 @@ header {
         display: flex;
         text-align: center;
         position: relative;
-        left: 21%;
+        left: 22%;
      }
 
 /* CSS html detalle de producto- contenedor de productos */
-.container-fluid {
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    flex-wrap:wrap;
-    background-color: rgb(235,235, 235);
-   
-}
 
-  /*CSS html detalle de producto- Targeta de producto*/
-.card {
-    padding: 10px 15px;
-    margin: 15px 10px;
+    .container_fluid_detalle_producto {
+        display: flex;
+        flex-direction: row;
+    }
+
+/*CSS html detalle de producto*/
+    .container_detalle_producto {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content:center;
+        padding: 15px;
+        max-width: 900px;
+    }
+
+    .div_img_product {
+        padding: 5px;
+        text-align: center;
+    }
+
+    .card_body_product {
+       border: rgba(151, 151, 185, 0.20) solid 2px;
+       padding: 20px;
+       width: auto;
+       max-height: calc(300vh - 150px);
+       margin: 10px 20px;
+    }
+
+    .div_caracteristicas_producto{
+        display: flex;
+        padding: 15px;
+        
+    }
+
+    .container_datos_producto{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content:center;
+        margin-top: -5%;
+    }
+
+    .botones_detalle_producto {
+        max-width: 50%;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+        margin: 0 110px;
+    }
+
+    .btn_detalle_producto{
+        width: 100%;
+    }
     
-}
-  /*CSS html detalle de producto- Targeta de producto*/
-.card-body {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    justify-content:center;
-    background-color: rgb(255, 255, 255);
-}
+    
 
 /*CSS html footer*/
 footer {
@@ -538,6 +571,64 @@ footer {
 li a i {
     font-size: 40px;
 }
+
+/*CSS html formulario de creacion de producto*/
+
+    .body_form_register{
+        background-image: url(https://www.kienyke.com/sites/default/files/2021-10/celulares-dia-sin-iva-computadores-dia-sin-iva-televisores-dia-sin-iva.jpg);
+        
+    }
+
+    .formulario_producto{
+        background-color: rgba(92, 92, 92, 0.52);
+        color: white;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 5px;
+        margin: auto;
+        max-width: 600px;
+
+    }
+
+    .cont_formulario_producto{
+        border: #000000;
+    }
+
+    .div_formulario_productos{
+        background-color: #2f3b55;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 15px;
+        padding: 10px;
+    }
+
+/* CSS html Formulario de editar producto*/
+
+    .body_edit_register{
+        background-image: url(https://www.adslzone.net/app/uploads-adslzone.net/2019/03/deep-web.jpg);
+    }
+
+    .formulario_editar_producto{
+        background-color: rgba(53, 47, 47, 0.7);
+        color: white;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 40px;
+        margin: auto;
+        max-width: 750px;
+    }
+
+    .div_editar_productos{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(39, 128, 120, 0.8);
+        text-align: left;
+        padding: 10px;
+    }
 
 /*CSS html Carro_de_compra, section carrito*/
 .carrito {
@@ -572,7 +663,7 @@ li a i {
     padding: 0.3em 1em;
     text-align: center;
     text-decoration: none;
-    border: 2px solid rgb(214, 243, 52);
+    border: 2px solid rgb(12, 99, 80);
     font-size: 16px;
     display: inline-block;
     border-radius: 0.3em;
@@ -585,7 +676,7 @@ li a i {
 
 .button-compra before {
     content: "";
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(58, 54, 54, 0.5);
     height: 100%;
     width: 3em;
     display: block;
@@ -597,7 +688,7 @@ li a i {
 }
 
 .button-compra:hover {
-    background-color: #509447;
+    background-color: #127885;
     border: #f1f3f1;
     border: 2px solid #000000;
     color: rgb(0, 0, 0);
