@@ -155,8 +155,11 @@ const controlador=
                     id: usuario.id,
                     nombre: usuario.nombre,
                 }
+
+                
                 console.log('Este es el resultado de igual contraseña: '+ igualContrasena)
                 usuarioLogin.push(usuarioPrueba);
+
             }
             res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
             console.log("Ver: ", usuarioLogin);    
