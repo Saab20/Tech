@@ -1,4 +1,6 @@
 
+
+
 function productosData(sequelize, Datatypes) {
 
     cols = {

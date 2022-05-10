@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include("../partials/head", {title: 'Crear Producto'}) %>
+    <%- include("../partials/head", {title: 'CrearProducto'}) %>
 </head>
 
 
@@ -27,7 +27,7 @@
             <Br>
         </div>
         <div class="col-12">
-            <form action="/products/tienda" method="POST" enctype="multipart/form-data">
+            <form id="formularioProducto" action="/products/tienda" method="POST" enctype="multipart/form-data">
                 <div class="cont_formulario_producto">
                     <div class="div_formulario_productos">
                         <label for="name" class="form-label">Nombre del producto:</label>
@@ -137,18 +137,18 @@
 
 </div>
 </div>
+ <script src="/js/formularioproducto.js"> </script>
 
 
 
+  <footer>
+    <!--FOOTER-->
+     <%- include("../partials/footer") %>
+     <!--FOOTER-->
 
-<footer>
- <!--FOOTER-->
- <%- include("../partials/footer") %>
-<!--FOOTER-->
+   </footer>
 
-</footer>
-
-        
+ 
 </body>
 
 </html>

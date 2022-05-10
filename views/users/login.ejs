@@ -19,7 +19,7 @@
 
        <br>
 
-        <form class="login_formulario" action="/users/ingresoLogin" method="POST">
+        <form id="formularioingreso" class="login_formulario" action="/users/ingresoLogin" method="POST">
             <h5>Inicia sesión con tu cuenta</h5>
             <section class="seccion-ingresar">
               <p class="text-center-login">Ingresa con</p>
@@ -57,11 +57,12 @@
                 
                   <div class="form-group-email-email">
                       <label id="label_login_email" for="emal">Correo electrónico</label>
-                      <input class="email account_input form-control" data-validate="isEmail" type="email" name="email" value="">
+                      <input id="Correo" class="email account_input form-control" data-validate="isEmail" type="email" name="email" value="">
+                      
                   </div>
                   <div class="form-group-password">
                       <label id="label_login_email" for="password">Contraseña</label>
-                      <input class="password account_input form-control" type="password" data-validate="isPasswd" name="password" value="">
+                      <input id="pass" class="password account_input form-control" type="password" data-validate="isPasswd" name="password" value="">
                   </div>
                   <p><a href="#" title="Recuperar su contraseña olvidada" rel="nofollow">¿Olvidó su contraseña?</a></p>
                 </div>
@@ -80,6 +81,8 @@
                <a href="/users/register" class="btn">Regístrate</a>
             </div>
         </form>
+        <script src="/js/formularioingreso.js"> </script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     </div>
    <!--FOOTER-->
    <%- include("../partials/footer") %> 
