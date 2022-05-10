@@ -28,10 +28,12 @@ Formularios de crear y editar productos, creados.
 Sprint tres terminado, revisar playgroud  y clases para generar los JSON y el CRUD de productos, para sprint cuatro.
 
 23-feb-2022
+
 Sprint 4
 Ver clase de CRUD y la siguiente reunión se realizará el 26 de febrero
 
 23-feb-2022
+
 El CRUD de producto se Genera de la siguiente forma:
 Se crean las siguientes rutas:
 •	/ —> Vista del home
@@ -59,24 +61,30 @@ Implementación de la libreria express validator, para el formulario de regitro 
 Entrega de sprint 5. Con la respectiva implementación de los middlewares.
 
 04- Abril- 2022
+
 Implementación de libreria sequelize con la bd de https://www.alwaysdata.com/fr/ (Sergio)
 
 08-Abr-2022
+
 Creación de los modelos en sequelize
 
 12- Abr-2022
 Relaciones sequelize funcionales.
 
 20- Abril-2022
+
 Configuraciones CRUD productos a la base de datos
 
 21- Abril-2022
+
 Configuraciones CRUD usuarios a la base de datos
 
 25-Abr-2022
+
 Entrega del sprint 6. Todo lo requerido esta funcionando 
 
 06- Mayo-2022
+
 Se crearon las respectivas validaciones por Node js (backend) para el:
 
 - Formulario de creación de producto
@@ -85,5 +93,6 @@ Se crearon las respectivas validaciones por Node js (backend) para el:
 los Formulario de registro de usuario y Formulario de login de usuario, ya cuentan con las validaciones del lado del backend
 
 09- Mayo- 2022 
+
 Pendiente terminar de validar el carrito de compras 
 
