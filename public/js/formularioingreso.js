@@ -13,7 +13,7 @@ f.addEventListener("submit", function(e){
     let pass = document.getElementById("pass");
     let warnings="5555"
     let regexcorreo= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    let regexpass= /^[A-Za-z]\w{7,14}*(\w+{%!@})$/
+    let regexpass= /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/
 
     if (regexcorreo.test(correo.value)){
        
