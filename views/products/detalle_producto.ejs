@@ -23,7 +23,7 @@
                         <div  style="width: 30rem;">
                                 
                             <div class="card-body">
-                                <img src="/img/<%=producto.imagen%>" class="card-img-top" alt="Detalle de Producto">   
+                                <img src="/img/<%=producto.imagen%>" class="card-img-top" id="prodImg" alt="Detalle de Producto">   
                             </div>
                         </div>
                     </div>
@@ -32,26 +32,27 @@
    
                             <div class="card-body">
                                         
-                                <h4><%=producto.nombre %> </h4>
+                                <h4 id="name"><%=producto.nombre %> </h4>
                                 <div class="descripcion">
                                 
-                                    <p class="card-text"><%=producto.descripcion %></p>
-                                   
+                                    <p class="card-text"  value="<%=producto.inventario%>"><%=producto.descripcion %></p>
+                                    <p class="card-text d-block" id="inventario"><b><%=producto.inventario%></b></p>
                                 </div>
                                             <br>
                                 <div class="box-price">
-                                    <span class="price2"><b>Descuento:<%=producto.descuento %> % </b></span>
+                                    <span class="price2">   <b>Descuento:<%=producto.descuento %> % </b></span>
                                         <div>
                                             <span class="price1"><strike>$<%=producto.precio %></strike></span>
-                                            <span class="compra"> $<%=producto.precio - (producto.descuento * producto.precio / 100) %></i></span>
+                                            <span class="compra" id="precio"> $<%=producto.precio - (producto.descuento * producto.precio / 100) %></i></span>
                                         </div>
                                             
                                 </div>
                                             <br>
                                             <br>
                                 <div class="d-grid gap-2 d-md-block">
-
-                                    <button type="button" class="btn btn-secondary ">Añadir al Carrito</button>
+                                    
+                                        <button type="submit" class="btn btn-secondary" id="cartBtn" >Añadir al Carrito</button>
+                                   
 
                                     <a href="/products/editar_producto/<%=producto.id %>"><button type="button" class="btn btn-secondary ">Editar producto</button></a>  
 
@@ -81,6 +82,6 @@
 
 
 
-    
+            <script src="/js/carritoStorage.js"></script>
     </body>
 </html>
