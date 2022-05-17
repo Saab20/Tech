@@ -147,7 +147,7 @@ const controlador=
 
             for (usuario of usuarios){
                 let contrasenaUsuario = usuario.contrasena;
-               // let contrasenaEncriptada2 = bcryptjs.hashSync(passwordToLogin, 8);
+               // let contrasenaEncriptada = bcryptjs.hashSync(passwordToLogin, 8);
 
                 let igualContrasena= bcryptjs.compareSync(passwordToLogin, contrasenaUsuario);
 
@@ -155,8 +155,11 @@ const controlador=
                     id: usuario.id,
                     nombre: usuario.nombre,
                 }
+
+                
                 console.log('Este es el resultado de igual contraseña: '+ igualContrasena)
                 usuarioLogin.push(usuarioPrueba);
+
             }
             res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
             console.log("Ver: ", usuarioLogin);    

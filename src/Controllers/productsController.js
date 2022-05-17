@@ -1,10 +1,11 @@
 const { json } = require('express/lib/response');
 const fs = require('fs');
 const path = require("path");
-
+const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models');
+const { fileURLToPath } = require('url');
 
 const session = require('express-session');
 const controlador=
@@ -12,42 +13,40 @@ const controlador=
 
     detalle_producto:(req, res)=>{
         
-        
         //const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        db.productos.findAll()
+        db.productos.findAll({include:[{association: 'especificaciones'}, {association: 'marcas'}, {association: 'categorias'}]})
         .then((productos) => {
+
             let idProducto= req.params.id;
             let productoEncontrado=null
-            let listaProductos = [];
+            let detalleProducto = [];
             for (producto of productos){
                 
                 if(producto.id==idProducto){
 
                     let rutaImg = "/img/"+ producto.imagen
-                    let productohome ={
-                        id: producto.id,
-                        nombre: producto.nombre,
-                        precio: producto.precio,
-                        imagen: rutaImg,
-                        descuento: producto.descuento,  
-                        inventario: producto.inventario
-                    }
-                    listaProductos.push(productohome);
+                        let productoHome ={
+                            id: producto.id,
+                            nombre: producto.nombre,
+                            precio: producto.precio,
+                            imagen: rutaImg,
+                            inventario: producto.inventario,
+                            especificacion_tipo: producto.especificaciones.tipo,
+                            especificacion_valor: producto.especificaciones.valor,
+                        }
+                    detalleProducto.push(productoHome);
                     productoEncontrado=producto;
                     break;
-                    
+                     
                 }
                 
             }
+            console.log(detalleProducto) 
             
-            console.log(listaProductos)
             res.render("products/detalle_producto.ejs",{producto: productoEncontrado})
         })
 
     },
-
-
-   
 
     // detalle_producto:(req, res)=>{
     //     let idProducto= req.params.nombre;
@@ -108,9 +107,7 @@ const controlador=
                 precio:productoseditado.price,
                 price2:productoseditado.price2,
                 descuento:productoseditado.discount,
-                
                 descripcion:productoseditado.descripcion,
-
 
                 },
                 
@@ -124,11 +121,6 @@ const controlador=
                 res.redirect("/")
 
             })
-                
-           
-          
-    
-        
     },
    
 
@@ -140,10 +132,13 @@ const controlador=
 
     // Acción de crear un producto
     create:(req, res)=>{
+        const resultValidation = validationResult(req);
+       //  return res.send(resultValidation);
+        if ( resultValidation.isEmpty() ) {
 
-        let nombreImagen = req.file.filename;
+            let nombreImagen = req.file.filename;
 
-        db.productos.create({
+            db.productos.create({
 
                 nombre : req.body.name,
                 precio : req.body.price,
@@ -155,6 +150,24 @@ const controlador=
                 imagen: nombreImagen
 
         });
+
+        res.redirect("/")
+        console.log(productoNuevo)
+    
+    }else{
+
+        res.render("products/crear_producto.ejs", {errors: resultValidation.mapped(),
+            oldData: {
+                name : req.body.name,
+                price : req.body.price,
+                discount: req.body.discount,
+                inventory : req.body.inventory,
+                category: req.body.category,
+                mark: req.body.mark,
+                description : req.body.description,
+            } 
+        })
+    }
 
         // idNuevo=0;
 
@@ -184,9 +197,6 @@ const controlador=
         // }
         // productos.push(productonuevo)
         // fs.writeFileSync(productsFilePath,JSON.stringify(productos,null,' '))
-
-        res.redirect("/")
-        console.log(productoNuevo)
 
     },
 
@@ -219,11 +229,6 @@ const controlador=
             })
         
     },
-
-
-
-
-
 
     //     // Delete - Borrar un producto
     // destroy : (req, res) => {
