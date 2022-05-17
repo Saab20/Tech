@@ -7,6 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models');
 const { fileURLToPath } = require('url');
 
+const session = require('express-session');
 const controlador=
 {
 
@@ -29,6 +30,7 @@ const controlador=
                             nombre: producto.nombre,
                             precio: producto.precio,
                             imagen: rutaImg,
+                            inventario: producto.inventario,
                             especificacion_tipo: producto.especificaciones.tipo,
                             especificacion_valor: producto.especificaciones.valor,
                         }
@@ -202,6 +204,12 @@ const controlador=
     carro_de_compras:(req, res)=>{
         res.render("products/carro_de_compras.ejs")
     },
+
+   
+        
+
+       
+   
 
     destroy:(req, res)=>{
     

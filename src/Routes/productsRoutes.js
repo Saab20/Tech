@@ -25,7 +25,8 @@ const uploadFile = multer({ storage: configuracionImagen });
 router.get("/detalle_producto/:id",productsController.detalle_producto)
 
 // /*** ENRUTADOR PARA CARRO DE COMPRA***/||
-router.get("/carro_de_compras",productsController.carro_de_compras)
+router.get("/carro_de_compras/",productsController.carro_de_compras)
+
 
 // /*** ENRUTADOR PARA CREAR UN PRODUCTO***/
 router.get("/crear_producto",productsController.crear_producto)

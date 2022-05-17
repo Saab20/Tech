@@ -631,14 +631,43 @@ li a i {
     }
 
 /*CSS html Carro_de_compra, section carrito*/
-.carrito {
-    margin-top: 200px;
-}
-.carrito h1{
 
-    text-align: center;
 
-}
+.carrito{
+    margin-top: 100px !important;;
+    min-height: 70vh !important;;
+    max-width: 1000px !important;;
+    margin: 0 auto !important;;
+    width: 100% !important;
+};
+
+.table-carrito{
+margin-top: 100px;
+};
+
+.table__productos{
+display: flex !important;;
+
+};
+
+.img__prod{
+    border: 1px solid #ddd!important;
+    border-radius: 4px !important;
+    padding: 5px !important;
+    width: 150px !important;
+};
+
+.table__cantidad  input{
+width: 40px !important;;
+border: none !important;;
+font-size: 16px !important;;
+font-weight: 700 !important;;
+margin-right: 30px !important;;
+margin-bottom: 20px !important;;
+};
+   
+
+
 @keyframes sheen {
     0% {
         transform: skewY(-45deg) translateX(0);
@@ -950,7 +979,11 @@ li a i {
             .contenedor_mi_cuenta {
                     width: 50%;
                 }
-}
+            
+               
+        }
+
+
 /* Oculta icono de hamburguesa-Html header */
 @media (min-width: 905px) {
     header {
@@ -986,7 +1019,9 @@ li a i {
         position: relative;
         background-color: rgb(56, 56, 56);
     }
+   
 }
+
 
 @media only screen and (min-width: 450px) {}
 

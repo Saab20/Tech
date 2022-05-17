@@ -21,7 +21,7 @@
             <div class="container_detalle_producto">
                  
                     <div class="div_img_product">
-                        <img src="/img/<%=producto.imagen%>" style="width: 50%;"class="card-img-detalle-product" alt="Detalle de Producto">   
+                        <img src="/img/<%=producto.imagen%>" style="width: 50%;"class="card-img-detalle-product" id="prodImg"alt="Detalle de Producto">   
                     </div>
                           
                     <div class="div_caracteristicas_producto">
@@ -30,6 +30,7 @@
                             <p class="card-text">Marca: <%=producto.marcas.nombre%></p>
                             <p class="card-text">Categoria: <%=producto.categorias.nombre%></p>
                             <p class="card-text"> Especificaciones: <%=producto.especificaciones.valor%> </p>
+                            <p class="card-text" id="inventario"> Inventario: <%=producto.inventario%> </p>
                         </div>
                         <div class="col"> 
                             <h4 for="text">Resumen del producto</h4>
@@ -42,7 +43,7 @@
    
                     <div class="card_body_product">
                                         
-                        <h3><%=producto.nombre %> </h3>
+                        <h3 id="name"><%=producto.nombre %> </h3>
                             
                         <a class="card-text">Más información</a>   
                                     
@@ -51,13 +52,13 @@
                                     <div>
                                         <span class="price1" style="font-size:20px;"><strike>$<%=producto.precio %> </strike> Antes </span>
                                         <br>
-                                        <span class="compra" style="font-size:28px; color: brown;"> <b> $ <%=producto.precio - (producto.descuento * producto.precio / 100) %> </i> Hoy </b></span>
+                                        <span class="compra" style="font-size:28px; color: brown;" id="precio"> <b> $ <%=producto.precio - (producto.descuento * producto.precio / 100) %> </i> Hoy </b></span>
                                     </div>            
                             </div>
                                         <br>
                             <div class="d-grid gap-2 botones_detalle_producto">
 
-                                    <button type="button" class="btn btn-secondary btn_detalle_producto">Agregar al Carrito</button>
+                                    <button type="button" id="cartBtn" class="btn btn-secondary btn_detalle_producto">Agregar al Carrito</button>
 
                                     <a href="/products/editar_producto/<%=producto.id %>"><button type="button" class="btn btn-secondary btn_detalle_producto">Editar producto</button></a>  
 
@@ -76,5 +77,9 @@
         <%- include("../partials/footer") %> 
             <!--FOOTER-->
 
+
+
+
+            <script src="/js/carritoStorage.js"></script>
     </body>
 </html>

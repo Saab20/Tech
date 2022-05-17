@@ -14,110 +14,39 @@
 <!--MENU-->
 
 
-<div>
-
-  
-  <section class="carrito" >
-    <h1>Mi carrito de compras</h1>
-    <br>
-    <br>
-    <div class="container mt-5 align-items-center">
-      <table class="table mt-5">
-        <thead>
-          <tr class="text-center">
-            <th scope="col">Producto</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Precio</th>
-            <th scope="col" >Seleccionar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="text-center">
-            <th scope="row">Producto 1</th>
-            <td class="col-sm-2">
-              <div class="input-group">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                      <span>-</span>
-                    </button>
-                </span>
-                <input type="text" name="quant[2]" class="form-control input-number text-center" value="10" min="1" max="100">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                      <span>+</span>
-                    </button>
-                </span>
-          </div>
-        </td>
-            <td class="col-sm-3 align-middle">1500$</td>
-            <td class="align-middle"><div class="form-check form-check-inline align-middle">
-              <input class="form-check-input" type="checkbox" value="" id="inlineCheckDefault">
-              <label class="form-check-label" for="inlineCheckDefault"></label>
-            </div></td>
-          </tr>
-          <tr class="text-center">
-            <th scope="row">Producto 2</th>
-            <td class="col-sm-2">
-              <div class="input-group">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                      <span>-</span>
-                    </button>
-                </span>
-                <input type="text" name="quant[2]" class="form-control input-number text-center" value="10" min="1" max="100">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                      <span>+</span>
-                    </button>
-                </span>
-          </div>
-        </td>
-            <td class="col-sm-3 align-middle">1500$</td>
-            <td class="align-middle"><div class="form-check form-check-inline align-middle">
-              <input class="form-check-input" type="checkbox" value="" id="inlineCheckDefault">
-              <label class="form-check-label" for="inlineCheckDefault"></label>
-            </div></td>
-          </tr>
-          <tr class="text-center">
-            <th scope="row">Producto 3</th>
-            <td class="col-sm-2">
-              <div class="input-group">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]">
-                      <span>-</span>
-                    </button>
-                </span>
-                <input type="text" name="quant[2]" class="form-control input-number text-center" value="10" min="1" max="100">
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]">
-                      <span>+</span>
-                    </button>
-                </span>
-          </div>
-        </td>
-            <td class="col-sm-3 align-middle">1500$</td>
-            <td class="align-middle"><div class="form-check form-check-inline align-middle">
-              <input class="form-check-input" type="checkbox" value="" id="inlineCheckDefault">
-              <label class="form-check-label" for="inlineCheckDefault"></label>
-            </div></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="container">
-      <div class="row justify-content-end">
-        <div class="col-sm-3">
-          <button type="button" class="btn btn-success">Comprar</button>
-          <button type="button" class="btn btn-danger">Borrar</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="carrito">
+  <br>
+  <br>
+  <br>
+<table class="table table-carrito">
+  <thead>
+    <tr class="text-success">
+      <th scope="col"></th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody id="carro">
+    
+  </tbody>
+</table>
+<br>
+<br>
+<div class="row mx-4">
+  <div class="col"> 
+<h3 class="carritoTotal">Total:</h3>
+  </div>
+<div class="col d-flex justify-content-end">
+  <button class="btn btn-success">Comprar</button>
+</div>
+</div>
 </div>
         
 
 <!--FOOTER-->
 <%- include("../partials/footer") %> 
 <!--FOOTER-->
-
+<script src="/js/cantidad.js"></script>
     </body>
+    
