@@ -137,11 +137,16 @@ const controlador=
         let emailToLogin = req.body.email;
         let passwordToLogin = req.body.password;
         console.log("Este es el email: " + emailToLogin + " Esta es la contraseña: " + passwordToLogin)
-
+        
         db.usuarios.findAll({
+
                  where: {
                      email: emailToLogin,
+                     
                  }
+
+        
+
              }).then((usuarios) => {
             let usuarioLogin = [];
 
@@ -163,7 +168,7 @@ const controlador=
             }
             res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
             console.log("Ver: ", usuarioLogin);    
-        });
+    });
    
     //     for(let u of usuarios ){
     //           if (u.email == emailToLogin){
