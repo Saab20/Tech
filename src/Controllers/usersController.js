@@ -136,33 +136,28 @@ const controlador=
         
         let emailToLogin = req.body.email;
         let passwordToLogin = req.body.password;
-        console.log("Este es el email: " + emailToLogin + " Esta es la contraseña: " + passwordToLogin)
 
         db.usuarios.findAll({
                  where: {
                      email: emailToLogin,
                  }
              }).then((usuarios) => {
+
             let usuarioLogin = [];
 
-            for (usuario of usuarios){
-                let contrasenaUsuario = usuario.contrasena;
-               // let contrasenaEncriptada = bcryptjs.hashSync(passwordToLogin, 8);
-
-                let igualContrasena= bcryptjs.compareSync(passwordToLogin, contrasenaUsuario);
-
-                let usuarioPrueba ={
-                    id: usuario.id,
-                    nombre: usuario.nombre,
+                for (usuario of usuarios){
+                    let usuarioLogeado ={
+                        id: usuario.id,
+                        contrasena: usuario.contrasena,
+                    }
+                    usuarioLogin.push(usuarioLogeado);
                 }
 
-                
-                console.log('Este es el resultado de igual contraseña: '+ igualContrasena)
-                usuarioLogin.push(usuarioPrueba);
-
-            }
-            res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
-            console.log("Ver: ", usuarioLogin);    
+            let igualContrasena= bcryptjs.compareSync(passwordToLogin, usuarioLogin[0].contrasena);
+            
+                if (igualContrasena){
+                    res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
+                } else {res.send('Datos Invalidos')}
         });
    
     //     for(let u of usuarios ){
