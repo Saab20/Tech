@@ -273,18 +273,64 @@ const controlador=
                     imagen: rutaImg,
                     descuento: producto.descuento,
                     marca: producto.marcas.nombre,
-                    imagen: rutaImg,
+                    
                     especificaciones: listaEspecificaciones
                 }
 
                 listaProductos.push(productoPrueba);
             }
+            res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})
+        });   
+    },
+
+    vitrina_tv:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 1}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
             res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})  
             console.log("Ver: ", listaProductos);
         });
-            console.log("llegue aca primero")
-            
     },
+
+    vitrina_cel:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 2}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
+            res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})  
+            console.log("Ver: ", listaProductos);
+        });
+    },      
+    
 };
 
 

@@ -42,4 +42,10 @@ router.delete('/delete/:id', productsController.destroy);
 // /*** ENRUTADOR PARA VITRINA DE PRODUCTOS***/ 
 router.get("/vitrina_productos",productsController.vitrina_productos)
 
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS TV***/ 
+router.get("/vitrina_tv",productsController.vitrina_tv)
+
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
+router.get("/vitrina_cel",productsController.vitrina_cel)
+
 module.exports=router
