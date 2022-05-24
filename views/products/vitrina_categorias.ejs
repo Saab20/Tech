@@ -17,29 +17,27 @@
 	<br>
 	<br>
 	<br>
-		<div class=" section-header-home ">
-			<h3>Todos los Productos</h3>
-		</div>
-		<br>
+	<br>
 
 	<div class="cont_vitrinas_categorias">
 		<div class="cont_ul_categorias">
-				<ul class="nav_vitrina_categorias">
-					<li><a href="/products/vitrina_productos">Todos los productos</a></li>
-                    <li><a href="/products/vitrina_tv">Televisores</a></li>
-                    <li><a href="/products/vitrina_cel">Celulares</a></li>
-                    <li><a href="/products/vitrina_computadoras">Computadoras</a></li>
-                    <li><a href="/products/vitrina_videojuegos">Videojuegos</a></li>
-                    <li><a href="/products/vitrina_pcGamer">Pc Gamer</a></li>
-                    <li><a href="/products/vitrina_audio">Auriculares, parlantes y audio</a></li> 
-			   </ul>
+			<ul class="nav_vitrina_categorias">
+				<li><a href="/products/vitrina_productos">Todos los productos</a></li>
+                <li><a href="/products/vitrina_tv">Televisores</a></li>
+                <li><a href="/products/vitrina_cel">Celulares</a></li>
+                <li><a href="/products/vitrina_computadoras">Computadoras</a></li>
+                <li><a href="/products/vitrina_videojuegos">Videojuegos</a></li>
+                <li><a href="/products/vitrina_pcGamer">Pc Gamer</a></li>
+                <li><a href="/products/vitrina_audio">Auriculares, parlantes y audio</a></li> 
+		   </ul>
 		</div>
+	
 		
 		<div class="container-fluid-home">
 			<% for (let producto of Allproductos) { %>
 			<div class="card-product-home">
 				<div class="card-img-product-home">
-					 <a href="/products/detalle_producto/<%=producto.id%>">
+					 <a href="/products/detalle_producto/<%=producto.id %>">
 					<img src="<%=producto.imagen%>" class="card-img-top-home" alt="Imagen de producto"></a>
 				</div>
 				<div class="card-body-home">
@@ -58,7 +56,6 @@
 			<% } %>
 		</div>
 	</div>
-
 
 	<!-- /todos los productos -->
 
