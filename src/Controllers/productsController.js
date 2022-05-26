@@ -302,7 +302,7 @@ const controlador=
                 }
                 listaProductos.push(productoSelecionado);
             }
-            res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})  
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
             console.log("Ver: ", listaProductos);
         });
     },
@@ -326,10 +326,106 @@ const controlador=
                 }
                 listaProductos.push(productoSelecionado);
             }
-            res.render("products/vitrina_productos.ejs", {Allproductos: listaProductos})  
-            console.log("Ver: ", listaProductos);
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
+            // console.log("Ver: ", listaProductos);
         });
-    },      
+    }, 
+    
+    vitrina_computadoras:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 3}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
+            // console.log("Ver: ", listaProductos);
+        });
+    },  
+
+    vitrina_videojuegos:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 10}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
+            // console.log("Ver: ", listaProductos);
+        });
+    },  
+
+    vitrina_pcGamer:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 15}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
+            // console.log("Ver: ", listaProductos);
+        });
+    },  
+
+    vitrina_audio:(req, res)=>{
+        db.productos.findAll({ 
+            where: {
+                id_categoriaFK: 12}
+        })
+        .then((productos) => {
+            let listaProductos = [];
+
+            for (producto of productos){
+
+                let productoSelecionado ={
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    imagen: "/img/"+ producto.imagen,
+                    descuento: producto.descuento,
+                }
+                listaProductos.push(productoSelecionado);
+            }
+            res.render("products/vitrina_categorias.ejs", {Allproductos: listaProductos})  
+            // console.log("Ver: ", listaProductos);
+        });
+    },  
     
 };
 

@@ -48,4 +48,16 @@ router.get("/vitrina_tv",productsController.vitrina_tv)
 // /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
 router.get("/vitrina_cel",productsController.vitrina_cel)
 
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
+router.get("/vitrina_computadoras",productsController.vitrina_computadoras)
+
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
+router.get("/vitrina_videojuegos",productsController.vitrina_videojuegos)
+
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
+router.get("/vitrina_pcGamer",productsController.vitrina_pcGamer)
+
+// /*** ENRUTADOR PARA VITRINA DE PRODUCTOS POR CATEGORIAS***/ 
+router.get("/vitrina_audio",productsController.vitrina_audio)
+
 module.exports=router
