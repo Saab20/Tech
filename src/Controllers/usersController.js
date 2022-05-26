@@ -136,8 +136,12 @@ const controlador=
         
         let emailToLogin = req.body.email;
         let passwordToLogin = req.body.password;
+<<<<<<< HEAD
         console.log("Este es el email: " + emailToLogin + " Esta es la contraseña: " + passwordToLogin)
         
+=======
+
+>>>>>>> 85654c2099fd39475807568ebcaf52bfe81d8708
         db.usuarios.findAll({
 
                  where: {
@@ -148,19 +152,18 @@ const controlador=
         
 
              }).then((usuarios) => {
+
             let usuarioLogin = [];
 
-            for (usuario of usuarios){
-                let contrasenaUsuario = usuario.contrasena;
-               // let contrasenaEncriptada = bcryptjs.hashSync(passwordToLogin, 8);
-
-                let igualContrasena= bcryptjs.compareSync(passwordToLogin, contrasenaUsuario);
-
-                let usuarioPrueba ={
-                    id: usuario.id,
-                    nombre: usuario.nombre,
+                for (usuario of usuarios){
+                    let usuarioLogeado ={
+                        id: usuario.id,
+                        contrasena: usuario.contrasena,
+                    }
+                    usuarioLogin.push(usuarioLogeado);
                 }
 
+<<<<<<< HEAD
                 
                 console.log('Este es el resultado de igual contraseña: '+ igualContrasena)
                 usuarioLogin.push(usuarioPrueba);
@@ -169,6 +172,14 @@ const controlador=
             res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
             console.log("Ver: ", usuarioLogin);    
     });
+=======
+            let igualContrasena= bcryptjs.compareSync(passwordToLogin, usuarioLogin[0].contrasena);
+            
+                if (igualContrasena){
+                    res.redirect("/users/mi_cuenta/"+ usuarioLogin[0].id);
+                } else {res.send('Datos Invalidos')}
+        });
+>>>>>>> 85654c2099fd39475807568ebcaf52bfe81d8708
    
     //     for(let u of usuarios ){
     //           if (u.email == emailToLogin){

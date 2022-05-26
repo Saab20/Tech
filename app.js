@@ -1,6 +1,7 @@
 const usersRoutes= require("./src/Routes/usersRoutes")
 const productsRoutes= require("./src/Routes/productsRoutes")
 const mainRoutes= require("./src/Routes/mainRoutes")
+const apiRoutes = require("./src/Routes/apiRoutes")
 const session= require('express-session')
 const mysql=require('mysql')
 
@@ -27,7 +28,7 @@ app.use("/products", productsRoutes)
 
 app.use(session({secret: '123456', resave: true, saveUninitialized: true}))
 
-
+app.use("/admin", apiRoutes);
 
 /*app.use("*", (req, res)=>{
     res.render("ruta erronea")

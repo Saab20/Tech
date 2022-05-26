@@ -140,7 +140,7 @@ header {
 
 /*= Html header - Icono menu hamburguesa =*/
 .btn-toggle-navbar {
-    background-color: rgb(0, 0, 0);
+
     font-size: 1.5em;
     border: none;
     border-radius: 4px;
@@ -426,7 +426,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap:wrap;
-        background-color: rgb(27, 72, 104);
+       /* background-color: rgb(27, 72, 104);*/
         border-radius: 1.5% ;
        
     }
@@ -436,13 +436,18 @@ header {
         margin: 15px 10px;
         width: 18rem;
         height: 26rem;
-        border-radius: 8%;
+        border-radius: 5%;
         background-color: white;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        
+        border: solid 1px #eee;
+    }
+
+    .card-product-home:hover {
+        border: solid 2px rgb(194, 194, 194);
+        transition: background-color .5s;
     }
 
     .card-img-product-home{
@@ -728,6 +733,53 @@ margin-bottom: 20px !important;;
     transition: all 0.5s ease-in-out;
 }
 
+
+/* CSS vitrina de producto- boton compra  */
+
+.wrapper-button-compra-vitrina {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    left: 30%;
+ }
+
+ /* CSS vitrina de producto- boton compra  */
+.button-detalle-product {
+    padding: 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid rgb(5, 56, 45);
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    background: rgb(48, 47, 47);
+    color: white;
+}
+
+    .button-detalle-product before {
+        content: "";
+        background-color: rgba(58, 54, 54, 0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(13.5em);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .button-detalle-product:hover {
+        background-color: #44b5c4;
+        border: #f1f3f1;
+        border: 2px solid #4d4d4d;
+        color: rgb(0, 0, 0);
+    }
+
 /* CSS html register */
 .main_register {
     text-align:justify;
@@ -985,7 +1037,7 @@ margin-bottom: 20px !important;;
 
 
 /* Oculta icono de hamburguesa-Html header */
-@media (min-width: 905px) {
+@media (min-width: 1186px) {
     header {
         position:fixed;
         width: 100%;
