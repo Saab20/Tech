@@ -2,16 +2,42 @@ const db = require ("../database/models")
 const { Sequelize } = require('sequelize');
 
 const ApiController ={
-
-    panel: (req,res) => {
+    lastUser: async (req,res) => {
         try {
-            
+            let users = await db.usuarios.findAll({
+                
+            })  
+            const lastUser = users.pop()
+            let lastUserImgUrl = lastUser.img_perfil
+
+            let response = {
+                lastUser: lastUser,
+                lastUserImgUrl: `${req.protocol}://${req.get('host')}/img/${lastUserImgUrl}`
+            }
+            res.status(200).json({response})
         } catch (error) {
             console.log(error)
             res.status(500).json({msg:"error"})
-        }
-        res.json("panel")
-    },
+        }},
+
+    lastProduct: async (req,res) => {
+        try {
+            let products = await db.productos.findAll({
+                include: [{association:"categorias"}]
+            })  
+            const lastProduct = products.pop()
+            let lastProductImgUrl = lastProduct.imagen
+
+            let response = {
+                lastProduct: lastProduct,
+                lastProductImgUrl: `${req.protocol}://${req.get('host')}/img/${lastProductImgUrl}`
+            }
+            res.status(200).json({response})
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({msg:"error"})
+        }},
+
     users: async (req,res) => {
         try {
             const limit = 10
@@ -49,11 +75,11 @@ const ApiController ={
     userDetail: async (req,res) => {
         try {
             let userDetail = await db.usuarios.findByPk(req.params.id, {attributes: {exclude:["password"]}})
-            let userAvatarUrl = userDetail.userAvatar
+            let userAvatarUrl = userDetail.img_perfil
             
             let response = {
                 user: userDetail,
-                userAvatarUrl: `${req.protocol}://${req.get('host')}/images/users/${userAvatarUrl}`
+                userAvatarUrl: `${req.protocol}://${req.get('host')}/img/users/${userAvatarUrl}`
             }
             res.status(200).json({response})     
         } catch (error) {
