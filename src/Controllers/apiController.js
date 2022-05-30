@@ -12,7 +12,7 @@ const ApiController ={
 
             let response = {
                 lastUser: lastUser,
-                lastUserImgUrl: `${req.protocol}://${req.get('host')}/img/${lastUserImgUrl}`
+                lastUserImgUrl: `${req.protocol}://${req.get('host')}/img/users/${lastUserImgUrl}`
             }
             res.status(200).json({response})
         } catch (error) {
