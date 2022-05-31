@@ -4,7 +4,7 @@ const mainRoutes= require("./src/Routes/mainRoutes")
 const apiRoutes = require("./src/Routes/apiRoutes")
 const session= require('express-session')
 const mysql=require('mysql')
-
+const cors = require('cors');
 
 const express = require("express")
 const app = express()
@@ -29,6 +29,9 @@ app.use("/products", productsRoutes)
 app.use(session({secret: '123456', resave: true, saveUninitialized: true}))
 
 app.use("/admin", apiRoutes);
+
+
+app.use(cors());
 
 /*app.use("*", (req, res)=>{
     res.render("ruta erronea")
