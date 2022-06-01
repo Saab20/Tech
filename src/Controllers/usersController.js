@@ -136,11 +136,15 @@ const controlador=
         
         let emailToLogin = req.body.email;
         let passwordToLogin = req.body.password;
-
         db.usuarios.findAll({
+
                  where: {
                      email: emailToLogin,
+                     
                  }
+
+        
+
              }).then((usuarios) => {
 
             let usuarioLogin = [];
