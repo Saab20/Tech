@@ -117,11 +117,7 @@ const ApiController ={
                 include: [{association:"categorias"}],
                 group: ['categorias.id']
             })
-            // countByCategory.forEach(cat => {                
-            //     const {dataValues} = cat;
-            //     //console.log("cat", cat);
-            //     console.log("dataValues", dataValues);
-            // })
+        
             console.log(rows)
             const totalPages = Math.ceil(products.count / limit)
             let response = {
